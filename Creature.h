@@ -9,8 +9,9 @@
 using namespace std;
 
 class Creature{
+private:
 
-    
+
 };
 
 #endif //INC_30862_TEXT_GAME_CREATURE_H
