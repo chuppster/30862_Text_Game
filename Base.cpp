@@ -7,41 +7,42 @@
 Base::Base(){}
 Base::~Base(){}
 
-std::string getName(){
+std::string Base::getName(){
     return name;
 }
-std::string getStatus(){
+std::string Base::getStatus(){
     return status;
 }
-std::string getDescription(){
-    return  this.description;
+std::string Base::getDescription(){
+    return  description;
 }
-std::vector<std::string> getTrigger(){
-    return this.trigger;
+std::vector<std::string> Base::getTrigger(){
+    return trigger;
 }
-void setName(std::string _name){
-    this.name = _name;
+void Base::setName(std::string _name){
+    name = _name;
 }
-void setStatus(std::string _status){
-    this.status - _status;
+void Base::setStatus(std::string _status){
+    status = _status;
 }
-void setDescription(std::string _description){
-    this.description = _description;
+void Base::setDescription(std::string _description){
+    description = _description;
 }
-void addTrigger(std::string _trigger){
-    this.trigger.push_back(_trigger);
+void Base::addTrigger(std::string _trigger){
+    trigger.push_back(_trigger);
 }
-void removeTrigger(std::string _trigger) {
-    int i = 0;
-    while (this.trigger[i] != _trigger) {
-        i++;
+void Base::removeTrigger(std::string _trigger) {
+    for (std::vector<std::string>::iterator it = trigger.begin() ; it != trigger.end(); ++it)
+    {
+        if (*it == _trigger)
+        {
+            trigger.erase(it);
+        }
     }
-    this.trigger.erase(i);
 }
 
-void printVec(std::vector vec){
-    int i = 0;
+void Base::printVec(std::vector<std::string> vec){
     for (std::vector<std::string>::iterator it = vec.begin() ; it != vec.end(); ++it)
-        std::cout << ' ' << *it;
+        std::cout << *it<< ' ' ;
     std::cout << '\n';
 }

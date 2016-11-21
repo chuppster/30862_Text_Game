@@ -7,30 +7,38 @@
 
 #include <iostream>
 #include <string>
+#include "Base.h"
+#include "Creature.h"
+#include "Item.h"
+#include "Container.h"
+
 using namespace std;
 
 class Room : public Base{
 private:
-    String type;
+    string type;
     std::vector<std::string> border;
-    std::vector<std::string> container;
-    std::vector<std::string> item;
-    std::vector<std::string> creature;
+    vector<Container> container;
+    vector<Item> item;
+    vector<Creature> creature;
 public:
-    String getType();
+    string getType();
     std::vector<std::string> getBorder();
-    std::vector<std::string> getContainer();
-    std::vector<std::string> getItem();
-    std::vector<std::string> getCreature();
-    void setType(String type);
-    void addBorder(std::string border);
-    void addContainer(std::string container);
-    void addItem(std::string item);
-    void addCreature(std::string creature);
-    void removeBorder(std::string border);
-    void removeContainer(std::string container);
-    void removeItem(std::string item);
-    void removeCreature(std::string creature);
+    vector<Container> getContainer();
+    vector<Item> getItem();
+    vector<Creature> getCreature();
+    void setType(string _type);
+    void addBorder(std::string _border);
+    void addContainer(Container _container);
+    void addItem(Item _item);
+    void addCreature(Creature _creature);
+    void removeBorder(std::string _border);
+    void removeContainer(Container _container);
+    void removeItem(Item _item);
+    void removeCreature(Creature _creature);
+
+    void Room();
+    virtual void ~Room();
 };
 
 #endif //INC_30862_TEXT_GAME_ROOM_H
