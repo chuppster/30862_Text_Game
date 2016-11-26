@@ -4,33 +4,33 @@
 #include "Item.h"
 #include "Container.h"
 #include "Creature.h"
+#include "rapidxml.hpp"
+#include "rapidxml_utils.hpp"
+//#include "rapidxml_iterators.hpp"
+#include "rapidxml_print.hpp"
+using namespace rapidxml;
 
 int main() {
-    /*std::cout << "Hello, World!" << std::endl;
-    std::cout << "I'm gonna make a game" << std::endl;
 
-    std::string tmp1 ("Test1");
-    std::string tmp2 ("Test2");
-
-    Base* test = new Base();
-
-    test->addTrigger(tmp2);
-    test->setName(tmp1);
-    tmp1 = "Bob";
-    test->addTrigger(tmp1);
-    tmp1 = "Sam";
-    test->addTrigger(tmp1);
-
-
-    std::cout << "Output ---------------------" << std::endl;
-    test->printVec(test->getTrigger());
-    std::cout << test->getName() << std::endl;
-
-    std::cout << "Try to remove from trigger" << std::endl;
-    test->removeTrigger("Bob");
-    test->printVec(test->getTrigger());
-    */
-
+    std::ifstream f;
+    int len;
+    f.open("sample.xml", std::ifstream::in);
+    f.seekg(0, std::ios::end);
+    len = f.tellg();
+    printf("Len: %d\n",len);
+    f.seekg(0, std::ios::beg);
+    char currxml[len];
+    f.read(currxml, len);
+    f.close();
+    printf("Read File\n");
+    int i = 0;
+    while(i<len){
+        printf("a\n");
+        printf("%c",currxml[i]);
+        i++;
+    }
+    xml_document<> doc;
+    doc.parse<0>(currxml);
 
     return 0;
 }

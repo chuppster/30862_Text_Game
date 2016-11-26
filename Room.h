@@ -37,8 +37,8 @@ public:
     void removeItem(Item _item);
     void removeCreature(Creature _creature);
 
-    void Room();
-    virtual void ~Room();
+    Room();
+    virtual ~Room();
 };
 
 #endif //INC_30862_TEXT_GAME_ROOM_H

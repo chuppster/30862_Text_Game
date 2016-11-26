@@ -24,8 +24,8 @@ public:
     void addItem(Item _item);
     void addAccept(Item _item);
 
-    void Container();
-    virtual void ~Container();
+    Container();
+    virtual ~Container();
 
 };
 

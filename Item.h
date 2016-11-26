@@ -20,8 +20,8 @@ public:
     string getWriting();
     string getTurn_on();
 
-    void Item();
-    virtual void ~Item();
+    Item();
+    virtual ~Item();
 
 };
 

@@ -53,7 +53,7 @@ void Room::removeBorder(std::string _border){
 void Room::removeContainer(Container _container){
     for (std::vector<Container>::iterator it = container.begin() ; it != container.end(); ++it)
     {
-        if (((Container*)*it)->getName() == _container.getName())
+        if ((it)->getName() == _container.getName())
         {
             container.erase(it);
         }
@@ -62,7 +62,7 @@ void Room::removeContainer(Container _container){
 void Room::removeItem(Item _item){
     for (std::vector<Item>::iterator it = item.begin() ; it != item.end(); ++it)
     {
-        if (((Item*)*it)->getName() == _item.getName())
+        if ((it)->getName() == _item.getName())
         {
             item.erase(it);
         }
@@ -71,7 +71,7 @@ void Room::removeItem(Item _item){
 void Room::removeCreature(Creature _creature){
     for (std::vector<Creature>::iterator it = creature.begin() ; it != creature.end(); ++it)
     {
-        if (((Creature*)*it)->getName() == _creature.getName())
+        if ((it)->getName() == _creature.getName())
         {
             creature.erase(it);
         }

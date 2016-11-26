@@ -22,8 +22,8 @@ public:
     string getAttack();
     void setAttack(string _attack);
 
-    void Creature();
-    virtual void ~Creature();
+    Creature();
+    virtual ~Creature();
 
 };
 
