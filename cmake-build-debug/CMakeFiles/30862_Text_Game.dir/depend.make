@@ -30,7 +30,5 @@ CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Creature.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Item.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Room.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../main.cpp
-CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml.hpp
-CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml_print.hpp
-CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml_utils.hpp
+CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../tinyxml2.h
 

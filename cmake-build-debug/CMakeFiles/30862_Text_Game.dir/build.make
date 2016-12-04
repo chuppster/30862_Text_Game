@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.2.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Adrian\Documents\GitHub\30862_Text_Game
+CMAKE_SOURCE_DIR = C:\Users\adria_000\Documents\GitHub\30862_Text_Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/30862_Text_Game.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/30862_Text_Game.dir/flags.make
 
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: CMakeFiles/30862_Text_Game.dir/flags.make
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/30862_Text_Game.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\main.cpp.obj -c C:\Users\Adrian\Documents\GitHub\30862_Text_Game\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/30862_Text_Game.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\main.cpp.obj -c C:\Users\adria_000\Documents\GitHub\30862_Text_Game\main.cpp
 
 CMakeFiles/30862_Text_Game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/30862_Text_Game.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Adrian\Documents\GitHub\30862_Text_Game\main.cpp > CMakeFiles\30862_Text_Game.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adria_000\Documents\GitHub\30862_Text_Game\main.cpp > CMakeFiles\30862_Text_Game.dir\main.cpp.i
 
 CMakeFiles/30862_Text_Game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/30862_Text_Game.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Adrian\Documents\GitHub\30862_Text_Game\main.cpp -o CMakeFiles\30862_Text_Game.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adria_000\Documents\GitHub\30862_Text_Game\main.cpp -o CMakeFiles\30862_Text_Game.dir\main.cpp.s
 
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/30862_Text_Game.dir/main.cpp.obj.provides.build: CMakeFiles/30862_Tex
 
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: CMakeFiles/30862_Text_Game.dir/flags.make
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Room.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/30862_Text_Game.dir/Room.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Room.cpp.obj -c C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Room.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/30862_Text_Game.dir/Room.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Room.cpp.obj -c C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Room.cpp
 
 CMakeFiles/30862_Text_Game.dir/Room.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/30862_Text_Game.dir/Room.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Room.cpp > CMakeFiles\30862_Text_Game.dir\Room.cpp.i
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Room.cpp > CMakeFiles\30862_Text_Game.dir\Room.cpp.i
 
 CMakeFiles/30862_Text_Game.dir/Room.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/30862_Text_Game.dir/Room.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Room.cpp -o CMakeFiles\30862_Text_Game.dir\Room.cpp.s
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Room.cpp -o CMakeFiles\30862_Text_Game.dir\Room.cpp.s
 
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj.requires:
 
@@ -106,16 +106,16 @@ CMakeFiles/30862_Text_Game.dir/Room.cpp.obj.provides.build: CMakeFiles/30862_Tex
 
 CMakeFiles/30862_Text_Game.dir/Base.cpp.obj: CMakeFiles/30862_Text_Game.dir/flags.make
 CMakeFiles/30862_Text_Game.dir/Base.cpp.obj: ../Base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/30862_Text_Game.dir/Base.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Base.cpp.obj -c C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/30862_Text_Game.dir/Base.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Base.cpp.obj -c C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Base.cpp
 
 CMakeFiles/30862_Text_Game.dir/Base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/30862_Text_Game.dir/Base.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Base.cpp > CMakeFiles\30862_Text_Game.dir\Base.cpp.i
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Base.cpp > CMakeFiles\30862_Text_Game.dir\Base.cpp.i
 
 CMakeFiles/30862_Text_Game.dir/Base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/30862_Text_Game.dir/Base.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Base.cpp -o CMakeFiles\30862_Text_Game.dir\Base.cpp.s
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Base.cpp -o CMakeFiles\30862_Text_Game.dir\Base.cpp.s
 
 CMakeFiles/30862_Text_Game.dir/Base.cpp.obj.requires:
 
@@ -130,16 +130,16 @@ CMakeFiles/30862_Text_Game.dir/Base.cpp.obj.provides.build: CMakeFiles/30862_Tex
 
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: CMakeFiles/30862_Text_Game.dir/flags.make
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Container.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/30862_Text_Game.dir/Container.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Container.cpp.obj -c C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Container.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/30862_Text_Game.dir/Container.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Container.cpp.obj -c C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Container.cpp
 
 CMakeFiles/30862_Text_Game.dir/Container.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/30862_Text_Game.dir/Container.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Container.cpp > CMakeFiles\30862_Text_Game.dir\Container.cpp.i
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Container.cpp > CMakeFiles\30862_Text_Game.dir\Container.cpp.i
 
 CMakeFiles/30862_Text_Game.dir/Container.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/30862_Text_Game.dir/Container.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Container.cpp -o CMakeFiles\30862_Text_Game.dir\Container.cpp.s
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Container.cpp -o CMakeFiles\30862_Text_Game.dir\Container.cpp.s
 
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj.requires:
 
@@ -154,16 +154,16 @@ CMakeFiles/30862_Text_Game.dir/Container.cpp.obj.provides.build: CMakeFiles/3086
 
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: CMakeFiles/30862_Text_Game.dir/flags.make
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/30862_Text_Game.dir/Item.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Item.cpp.obj -c C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/30862_Text_Game.dir/Item.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Item.cpp.obj -c C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Item.cpp
 
 CMakeFiles/30862_Text_Game.dir/Item.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/30862_Text_Game.dir/Item.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Item.cpp > CMakeFiles\30862_Text_Game.dir\Item.cpp.i
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Item.cpp > CMakeFiles\30862_Text_Game.dir\Item.cpp.i
 
 CMakeFiles/30862_Text_Game.dir/Item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/30862_Text_Game.dir/Item.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Item.cpp -o CMakeFiles\30862_Text_Game.dir\Item.cpp.s
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Item.cpp -o CMakeFiles\30862_Text_Game.dir\Item.cpp.s
 
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj.requires:
 
@@ -178,16 +178,16 @@ CMakeFiles/30862_Text_Game.dir/Item.cpp.obj.provides.build: CMakeFiles/30862_Tex
 
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: CMakeFiles/30862_Text_Game.dir/flags.make
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: ../Creature.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Creature.cpp.obj -c C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Creature.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\30862_Text_Game.dir\Creature.cpp.obj -c C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Creature.cpp
 
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/30862_Text_Game.dir/Creature.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Creature.cpp > CMakeFiles\30862_Text_Game.dir\Creature.cpp.i
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Creature.cpp > CMakeFiles\30862_Text_Game.dir\Creature.cpp.i
 
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/30862_Text_Game.dir/Creature.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Adrian\Documents\GitHub\30862_Text_Game\Creature.cpp -o CMakeFiles\30862_Text_Game.dir\Creature.cpp.s
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\adria_000\Documents\GitHub\30862_Text_Game\Creature.cpp -o CMakeFiles\30862_Text_Game.dir\Creature.cpp.s
 
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj.requires:
 
@@ -222,7 +222,7 @@ CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj.provides.build: CMakeFiles/30862
 30862_Text_Game.exe: CMakeFiles/30862_Text_Game.dir/linklibs.rsp
 30862_Text_Game.exe: CMakeFiles/30862_Text_Game.dir/objects1.rsp
 30862_Text_Game.exe: CMakeFiles/30862_Text_Game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable 30862_Text_Game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable 30862_Text_Game.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\30862_Text_Game.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -244,6 +244,6 @@ CMakeFiles/30862_Text_Game.dir/clean:
 .PHONY : CMakeFiles/30862_Text_Game.dir/clean
 
 CMakeFiles/30862_Text_Game.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Adrian\Documents\GitHub\30862_Text_Game C:\Users\Adrian\Documents\GitHub\30862_Text_Game C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles\30862_Text_Game.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\adria_000\Documents\GitHub\30862_Text_Game C:\Users\adria_000\Documents\GitHub\30862_Text_Game C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles\30862_Text_Game.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/30862_Text_Game.dir/depend
 
