@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <cstring>
 #include "Base.h"
 #include "Room.h"
 #include "Item.h"
@@ -12,6 +14,8 @@
 #include <string>
 using namespace rapidxml;
 
+void print_xml(xml_node<>* node);
+
 int main() {
     std::ifstream f;
     int len;
@@ -24,11 +28,86 @@ int main() {
     f.close();
     int i = 0;
     while(i<len){
-        printf("%c",currxml[i]);
+        std::cout << currxml[i];
         i++;
     }
     xml_document<> doc;
-    doc.parse<0>(currxml);
+    try {
+        doc.parse<0>(currxml);
+    }catch(parse_error e)
+    {
+        cout << "Parse Exception: "<< e.what() << endl;
+    }
+
+    vector<Room> rooms;
+
+    xml_node<> *node = doc.first_node();
+
+    print_xml(node);
+
+
+    cout<<node->name()<<endl;
+    node = node->first_node();
+    cout<<node->name()<<endl;
+    node = node->first_node();
+    cout<<node->name()<<endl;
+    node = node->next_sibling();
+    cout<<node->name()<<endl;
+    node = node->next_sibling();
+    cout<<node->name()<<endl;
+    node = node->next_sibling();
+    cout<<node->name()<<endl;
+    node = node->next_sibling();
+    cout<<node->name()<<endl;
+
+
+
+
+
+
+
+    //cout << node->name() << endl;
+    /*if(strcmp(node->name(),"room") == 0)
+    {
+        cout << "Making a Room" << endl;
+        node = node->first_node();
+        Room *currRoom = new Room();
+        currRoom->setType(node->first_attribute()->value());
+        cout << currRoom->getType() << endl;
+    }*/
+    //cout << node->name() << endl;//this is map
+    /*while(node != NULL)
+    {
+        cout << node->name() << endl;
+        if(node -> first_node() == NULL)
+        {
+            node = node ->next_sibling();
+        }
+        else{
+            node = node->first_node();
+        }
+    }*/
+
+
 
     return 0;
+}
+
+void print_xml(xml_node<>* node)
+{
+    if(node == NULL)
+    {
+        return;
+    }
+    cout << node->name() << endl;
+
+    if(node -> first_node() != NULL)
+    {
+        print_xml(node -> first_node());
+    }
+    if(node -> next_sibling() != NULL)
+    {
+        print_xml(node->next_sibling());
+    }
+    return;
 }
