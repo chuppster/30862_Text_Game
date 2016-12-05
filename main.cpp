@@ -9,12 +9,14 @@
 #include "rapidxml.hpp"
 #include "rapidxml_utils.hpp"
 //#include "rapidxml_iterators.hpp"
-#include "rapidxml_print.hpp"
+//#include "rapidxml_print.hpp"
+#include "Map.h"
 #include <iostream>
 #include <string>
 using namespace rapidxml;
 
 void print_xml(xml_node<>* node);
+Map* build_map(Map* map, xml_node<>* firstnode);
 
 int main() {
     std::ifstream f;
@@ -45,52 +47,12 @@ int main() {
 
     print_xml(node);
 
-
-    cout<<node->name()<<endl;
-    node = node->first_node();
-    cout<<node->name()<<endl;
-    node = node->first_node();
-    cout<<node->name()<<endl;
-    node = node->next_sibling();
-    cout<<node->name()<<endl;
-    node = node->next_sibling();
-    cout<<node->name()<<endl;
-    node = node->next_sibling();
-    cout<<node->name()<<endl;
-    node = node->next_sibling();
-    cout<<node->name()<<endl;
-
-
-
-
-
-
-
-    //cout << node->name() << endl;
-    /*if(strcmp(node->name(),"room") == 0)
-    {
-        cout << "Making a Room" << endl;
-        node = node->first_node();
-        Room *currRoom = new Room();
-        currRoom->setType(node->first_attribute()->value());
-        cout << currRoom->getType() << endl;
-    }*/
-    //cout << node->name() << endl;//this is map
-    /*while(node != NULL)
-    {
-        cout << node->name() << endl;
-        if(node -> first_node() == NULL)
-        {
-            node = node ->next_sibling();
-        }
-        else{
-            node = node->first_node();
-        }
-    }*/
-
-
-
     return 0;
+}
+
+Map* build_map(xml_node<>* firstnode)
+{
+
 }
 
 void print_xml(xml_node<>* node)
@@ -99,7 +61,10 @@ void print_xml(xml_node<>* node)
     {
         return;
     }
-    cout << node->name() << endl;
+    if(strcmp(node->name(), "") != 0)
+    {
+        cout << "Name: (" << node->name() << ") Parent: (" << node->parent()->name() << ")" << endl;
+    }
 
     if(node -> first_node() != NULL)
     {

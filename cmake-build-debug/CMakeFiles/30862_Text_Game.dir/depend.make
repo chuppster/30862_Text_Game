@@ -17,6 +17,15 @@ CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Base.h
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Item.cpp
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Item.h
 
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Container.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Creature.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Item.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Map.cpp
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Map.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Room.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../rapidxml.hpp
+
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Base.h
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Container.h
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Creature.h
@@ -28,9 +37,9 @@ CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Base.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Container.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Creature.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Item.h
+CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Map.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Room.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml.hpp
-CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml_print.hpp
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml_utils.hpp
 

@@ -14,7 +14,7 @@ private:
     std::string name;
     std::string status;
     std::string description;
-    std::vector<std::string> trigger;
+    std::vector<string> trigger;
 public:
     std::string getName();
     std::string getStatus();

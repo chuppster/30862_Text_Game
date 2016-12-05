@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.2.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\adria_000\Documents\GitHub\30862_Text_Game
+CMAKE_SOURCE_DIR = C:\Users\Adrian\Documents\GitHub\30862_Text_Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -230,6 +230,33 @@ Item.cpp.s:
 	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
+Map.obj: Map.cpp.obj
+
+.PHONY : Map.obj
+
+# target to build an object file
+Map.cpp.obj:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Map.cpp.obj
+.PHONY : Map.cpp.obj
+
+Map.i: Map.cpp.i
+
+.PHONY : Map.i
+
+# target to preprocess a source file
+Map.cpp.i:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Map.cpp.i
+.PHONY : Map.cpp.i
+
+Map.s: Map.cpp.s
+
+.PHONY : Map.s
+
+# target to generate assembly for a file
+Map.cpp.s:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Map.cpp.s
+.PHONY : Map.cpp.s
+
 Room.obj: Room.cpp.obj
 
 .PHONY : Room.obj
@@ -305,6 +332,9 @@ help:
 	@echo ... Item.obj
 	@echo ... Item.i
 	@echo ... Item.s
+	@echo ... Map.obj
+	@echo ... Map.i
+	@echo ... Map.s
 	@echo ... Room.obj
 	@echo ... Room.i
 	@echo ... Room.s

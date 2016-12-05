@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/30862_Text_Game.dir/Container.cpp.obj"
   "CMakeFiles/30862_Text_Game.dir/Item.cpp.obj"
   "CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj"
+  "CMakeFiles/30862_Text_Game.dir/Map.cpp.obj"
   "30862_Text_Game.pdb"
   "30862_Text_Game.exe"
   "30862_Text_Game.exe.manifest"
