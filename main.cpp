@@ -16,7 +16,7 @@
 using namespace rapidxml;
 
 void print_xml(xml_node<>* node);
-Map* build_map(Map* map, xml_node<>* firstnode);
+Map* build_map(xml_node<>* firstnode);
 
 int main() {
     std::ifstream f;
@@ -41,18 +41,54 @@ int main() {
         cout << "Parse Exception: "<< e.what() << endl;
     }
 
-    vector<Room> rooms;
+    Map * map;
 
     xml_node<> *node = doc.first_node();
 
     print_xml(node);
 
+    map = build_map(node);
+
     return 0;
 }
 
-Map* build_map(xml_node<>* firstnode)
-{
+Map* build_map(xml_node<>* firstnode) {
+    xml_node<> *currnode = firstnode;
+    if ((strcmp("map", currnode->name())) == 0) {
+        currnode = currnode->first_node();
+    }
 
+    Map *map = new Map();
+
+    while (currnode != NULL)
+    {
+        if(strcmp(currnode->name(),"room"))
+        {
+            //map->rooms.push_back(currnode);
+            cout << "Added Room " << currnode->name() << endl;
+        }
+        if(strcmp(currnode->name(),"item"))
+        {
+            //map->items.push_back(currnode);
+            cout << "Added Item " << currnode->name() << endl;
+        }
+        if(strcmp(currnode->name(),"container"))
+        {
+            //map->containers.push_back(currnode);
+            cout << "Added Container " << currnode->name() << endl;
+        }
+        if(strcmp(currnode->name(),"creature"))
+        {
+            //map->creatures.push_back(currnode);
+            cout << "Added Creature " << currnode->name() << endl;
+        }
+        currnode = currnode->first_node();
+
+    }
+
+    cout << currnode->name() << endl;
+
+    return NULL;
 }
 
 void print_xml(xml_node<>* node)
