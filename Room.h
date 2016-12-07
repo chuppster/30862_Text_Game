@@ -17,18 +17,19 @@ using namespace std;
 
 class Room : public Base{
 private:
-    string type;
+    char* type;
     std::vector<Border*> border;
     vector<char*> container;
     vector<char*> item;
     vector<char*> creature;
 public:
-    string getType();
+    bool checkTrigger(string _command);
+    char* getType();
     vector<Border*> getBorder();
     vector<char*> getContainer();
     vector<char*> getItem();
     vector<char*> getCreature();
-    void setType(string _type);
+    void setType(char* _type);
     void addBorder(xml_node<>* node);
     void addContainer(char* _container);
     void addItem(char* _item);

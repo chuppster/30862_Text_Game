@@ -18,14 +18,59 @@ void Map::printRoomObj() {
 
 void Map::run()
 {
+    vector<string>* inventory;
+    bool exit = false;
     Room* room;
-    unsigned int i;
+    string input;
+    unsigned int i;//finding the entrance
     for(i = 0; i < roomVec.size(); i++)
     {
         if(string(roomVec.operator[](i)->getName()) == string("Entrance"))
         {
             room = roomVec.operator[](i);
         }
+    }
+    room->printDesc();//print the description of the entrance
+    bool triggered = false;
+    while(exit == false)//let's loop until we exit
+    {
+        cin >> input;//get the command
+
+        //check if triggers override command
+
+        //execute command if not overridden
+
+        //check if the effects of command activate trigger
+
+        //if the command activates the trigger, perform the indicated actions
+
+        if(input == string("n") || input == string("s") || input == string("e") || input == string("w"))
+        {
+            triggered = room->checkTrigger(input);
+        }
+        else if(input == string("i"))
+        {
+            cout << "Inventory: ";
+            if(inventory->size() == 0)
+            {
+                cout << "empty" << endl;
+            }
+            else
+            {
+                for(unsigned int j = 0; j < inventory->size(); i++)
+                {cout << inventory->operator[](i);}
+            }
+        }
+        else if(input.find("take") != string::npos)//take command
+        {
+            //split the string
+            vector<string> item = split(input, ' ');
+            cout << "Split: " << item.front() << endl;//not splitting properly
+        }
+
+            //check for triggers
+        if(input == string("exit"))
+        {exit = true;}
     }
 
 
@@ -37,7 +82,6 @@ void Map::build_map(xml_node<>* firstnode) {
     if (string("map") == string(currnode->name())) {
         currnode = currnode->first_node();
     }
-    cout << "Build Map Firstnode: " << currnode->name() << endl;
 
     while (true)
     {
@@ -71,7 +115,8 @@ void Map::node2obj() {
     for(i = 0; i < rooms.size(); i++)
     {
         room = new Room();
-        room->setType("regular");
+        char* typ = (char*)"regular";
+        room->setType(typ);
         currnode = rooms.operator[](i)->first_node();
         while(true)
         {
@@ -217,6 +262,22 @@ void Map::node2obj() {
         }
 
 
+}
+
+void Map::split(const std::string &s, char delim, std::vector<std::string> &elems) {
+    std::stringstream ss;
+    ss.str(s);
+    std::string item;
+    while (std::getline(ss, item, delim)) {
+        elems.push_back(item);
+    }
+}
+
+
+std::vector<std::string> Map::split(const std::string &s, char delim) {
+    std::vector<std::string> elems;
+    split(s, delim, elems);
+    return elems;
 }
 
 

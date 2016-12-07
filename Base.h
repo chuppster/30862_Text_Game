@@ -18,6 +18,7 @@ private:
     std::string description;
     Trigger trigger;
 public:
+    void printDesc();
     std::string getName();
     std::string getStatus();
     std::string getDescription();

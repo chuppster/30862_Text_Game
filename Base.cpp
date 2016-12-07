@@ -7,6 +7,10 @@
 Base::Base(){}
 Base::~Base(){}
 
+void Base::printDesc() {
+    cout << description << endl;
+}
+
 std::string Base::getName(){
     return name;
 }

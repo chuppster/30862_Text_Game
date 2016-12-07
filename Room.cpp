@@ -7,7 +7,16 @@
 Room::Room(){}
 Room::~Room(){}
 
-string Room::getType()
+bool Room::checkTrigger(string _command)
+{
+    if(string(getTrigger().command) == _command)
+    {
+        return true;
+    }
+    return false;
+}
+
+char* Room::getType()
 {
     return type;
 }
@@ -26,7 +35,7 @@ vector<char*> Room::getItem(){
 vector<char*> Room::getCreature(){
     return creature;
 }
-void Room::setType(string _type){
+void Room::setType(char* _type){
     type = _type;
 }
 void Room::addBorder(xml_node<>* node){
