@@ -21,7 +21,7 @@ void Map::run()
     vector<string>* inventory;
     bool exit = false;
     Room* room;
-    char* input;
+    string in1, in2, in3, in4;
     string border_room;
 
     unsigned int i;//finding the entrance
@@ -30,8 +30,7 @@ void Map::run()
     bool triggered = false;
     while(exit == false)//let's loop until we exit
     {
-        cin.get(input, 256);//get the command
-        cout<<"Input was: "<<input<< endl;
+        cin >> in1 >> in2 >> in3 >> in4;//get the command
 
         //check if triggers override command
 
@@ -41,12 +40,12 @@ void Map::run()
 
         //if the command activates the trigger, perform the indicated actions
 
-        if(input == string("n") || input == string("s") || input == string("e") || input == string("w"))
+        if(in1 == string("n") || in1 == string("s") || in1 == string("e") || in1 == string("w"))
         {
-            triggered = room->checkTrigger(input);
+            triggered = room->checkTrigger(in1);
             if(!triggered)
             {
-                border_room = room->getBorderRoom(input);
+                border_room = room->getBorderRoom(in1);
                 if(border_room == string(""))
                 {
                     cout<<"Can't go that way."<<endl;
@@ -55,7 +54,7 @@ void Map::run()
                 }
             }
         }
-        else if(input == string("i"))
+        else if(in1 == string("i"))
         {
             cout << "Inventory: ";
             if(inventory->size() == 0)
@@ -68,7 +67,7 @@ void Map::run()
                 {cout << inventory->operator[](i);}
             }
         }
-        else if(string(input).find("take") != string::npos)//take command
+        else if(in1 == string("take"))//take command
         {
             //split the string
             //vector<string> item = split(*string(input), ' ');
@@ -76,7 +75,7 @@ void Map::run()
         }
 
             //check for triggers
-        if(input == string("exit"))
+        if(in1 == string("exit"))
         {exit = true;}
     }
 
