@@ -15,16 +15,20 @@ using namespace rapidxml;
 
 class Map
 {
-public:
+private:
     vector<xml_node<>*> rooms;
     vector<xml_node<>*> items;
     vector<xml_node<>*> containers;
     vector<xml_node<>*> creatures;
+public:
     vector<Room*> roomVec;
     vector<Item*> itemVec;
     vector<Container*> containVec;
     vector<Creature*> creatureVec;
+    void printRoomObj();
     void node2obj();
+    void build_map(xml_node<>* firstnode);
+    void run();
     Map();
     virtual ~Map();
 };

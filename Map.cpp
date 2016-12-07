@@ -7,6 +7,63 @@
 Map::Map(){}
 Map::~Map(){}
 
+void Map::printRoomObj() {
+    cout << "Printing rooms based on objects:" << endl;
+    for(unsigned int i=0; i < rooms.size(); i++)
+    {
+        cout << rooms.operator[](i)->name() << ", ";
+    }
+    cout << endl;
+}
+
+void Map::run()
+{
+    Room* room;
+    unsigned int i;
+    for(i = 0; i < roomVec.size(); i++)
+    {
+        if(string(roomVec.operator[](i)->getName()) == string("Entrance"))
+        {
+            room = roomVec.operator[](i);
+        }
+    }
+
+
+}
+
+void Map::build_map(xml_node<>* firstnode) {
+    xml_node<> *currnode = firstnode;
+
+    if (string("map") == string(currnode->name())) {
+        currnode = currnode->first_node();
+    }
+    cout << "Build Map Firstnode: " << currnode->name() << endl;
+
+    while (true)
+    {
+        if(string(currnode->name())== string("room"))
+        {
+            rooms.push_back(currnode);
+        }
+        else if(string(currnode->name())== string("item"))
+        {
+            items.push_back(currnode);
+        }
+        else if(string(currnode->name())== string("container"))
+        {
+            containers.push_back(currnode);
+        }
+        else if(string(currnode->name())== string("creature"))
+        {
+            creatures.push_back(currnode);
+        }
+        if(currnode->next_sibling() == NULL)
+        {break;}
+        currnode = currnode->next_sibling();
+
+    }
+}
+
 void Map::node2obj() {
     unsigned int i = 0;
     xml_node<>* currnode;
@@ -14,6 +71,7 @@ void Map::node2obj() {
     for(i = 0; i < rooms.size(); i++)
     {
         room = new Room();
+        room->setType("regular");
         currnode = rooms.operator[](i)->first_node();
         while(true)
         {
@@ -58,8 +116,6 @@ void Map::node2obj() {
             currnode = currnode->next_sibling();
         }
         roomVec.push_back(room);
-
-        //cout << currnode->name() << ":" << currnode->value() << "::" << endl;
     }
 
     Item* item;

@@ -16,12 +16,16 @@
 using namespace rapidxml;
 
 void print_xml(xml_node<>* node);
-Map* build_map(xml_node<>* firstnode);
+void printVec(std::vector<std::string> vec);
 
 int main() {
     std::ifstream f;
     int len;
-    f.open("C:/xmls/sample.xml", std::ifstream::in);
+    string filename;
+    cout << "Enter Map Name in C:/xmls/:";
+    cin >> filename;
+    cout << "\n";
+    f.open("C:/xmls/"+filename, std::ifstream::in);
     f.seekg(0, std::ios::end);
     len = f.tellg();
     f.seekg(0, std::ios::beg);
@@ -37,55 +41,20 @@ int main() {
         cout << "Parse Exception: "<< e.what() << endl;
     }
 
-    Map * map;
-
     xml_node<> *node = doc.first_node();
+    Map* map = new Map;
+    map->build_map(node);   //create a list of each type of element from the XML tree
+    map->node2obj();        //parse list into objects
+    map->run();
 
-    //print_xml(node);
-
-    map = build_map(node);
-    map->node2obj();
 
     return 0;
 }
 
-Map* build_map(xml_node<>* firstnode) {
-    xml_node<> *currnode = firstnode;
-    if ((strcmp("map", currnode->name())) == 0) {
-        currnode = currnode->first_node();
-    }
-
-    Map *map = new Map();
-
-    while (true)
-    {
-        if(string(currnode->name())== string("room"))
-        {
-            map->rooms.push_back(currnode);
-            //cout << "Added Room " << currnode->name() << endl;
-        }
-        else if(string(currnode->name())== string("item"))
-        {
-            map->items.push_back(currnode);
-            //cout << "Added Item " << currnode->name() << endl;
-        }
-        else if(string(currnode->name())== string("container"))
-        {
-            map->containers.push_back(currnode);
-            //cout << "Added Container " << currnode->name() << endl;
-        }
-        else if(string(currnode->name())== string("creature"))
-        {
-            map->creatures.push_back(currnode);
-            //cout << "Added Creature " << currnode->name() << endl;
-        }
-        if(currnode->next_sibling() == NULL)
-        {break;}
-        currnode = currnode->next_sibling();
-
-    }
-
-    return map;
+void printVec(std::vector<std::string> vec){
+    for (std::vector<std::string>::iterator it = vec.begin() ; it != vec.end(); ++it)
+        std::cout << *it<< ' ' ;
+    std::cout << '\n';
 }
 
 void print_xml(xml_node<>* node)
