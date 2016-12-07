@@ -44,9 +44,17 @@ string Room::getBorderRoom(string dir)
     return string("");
 }
 
+void Room::pullTrigger(){
+    getTrigger()->printTrigger();
+    if(string(getTrigger()->type) != ("permanent"))
+    {
+        removeTrigger();
+    }
+}
+
 bool Room::checkTrigger(string _command)
 {
-    if(string(getTrigger().command) == _command)
+    if(string(getTrigger()->command) == _command)
     {
         return true;
     }

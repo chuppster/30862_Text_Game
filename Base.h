@@ -16,18 +16,18 @@ private:
     std::string name;
     std::string status;
     std::string description;
-    Trigger trigger;
+    Trigger* trigger;
 public:
+    void removeTrigger();
     void printDesc();
     std::string getName();
     std::string getStatus();
     std::string getDescription();
-    Trigger getTrigger();
+    Trigger* getTrigger();
     void setName(std::string _name);
     void setStatus(std::string _status);
     void setDescription(std::string _description);
     void setTrigger(xml_node<>* node);
-    void printVec(std::vector<std::string> vec);
 
     Base();
     virtual ~Base();

@@ -24,6 +24,7 @@ private:
     vector<char*> creature;
 public:
     bool checkTrigger(string _command);
+    void pullTrigger();
     char* getType();
     vector<Border*> getBorder();
     vector<char*> getContainer();

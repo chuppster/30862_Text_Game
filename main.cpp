@@ -43,8 +43,8 @@ int main() {
 
     xml_node<> *node = doc.first_node();
     Map* map = new Map;
-    map->build_map(node);   //create a list of each type of element from the XML tree
-    map->node2obj();        //parse list into objects
+    map->build_map(node); //create a list of each type of element from the XML tree
+    map->node2obj();        //parse list into object
     map->run();
 
 

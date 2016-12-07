@@ -22,7 +22,6 @@ private:
     vector<xml_node<>*> items;
     vector<xml_node<>*> containers;
     vector<xml_node<>*> creatures;
-    vector<string> split(string &s, char delim);
 public:
     Room* getRoom(string name);
     vector<Room*> roomVec;

@@ -23,6 +23,7 @@ public:
     Trigger();
     virtual ~Trigger();
     void setup(xml_node<>* node);
+    void printTrigger();
 };
 
 #endif //INC_30862_TEXT_GAME_TRIGGER_H

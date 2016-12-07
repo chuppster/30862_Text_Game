@@ -45,13 +45,16 @@ void Map::run()
             triggered = room->checkTrigger(in1);
             if(!triggered)
             {
-                border_room = room->getBorderRoom(in1);
-                if(border_room == string(""))
+                border_room = room->getBorderRoom(in1);//gets you the name of the room in that direction
+                if(border_room == string(""))//if you can't find the room
                 {
                     cout<<"Can't go that way."<<endl;
-                } else{
+                } else{//if you can, move to the next room
                     room = getRoom(border_room);
+                    cout << room->getDescription() << endl;
                 }
+            } else{
+                room->pullTrigger();
             }
         }
         else if(in1 == string("i"))
@@ -140,7 +143,7 @@ void Map::node2obj() {
             }
             else if(string(currnode->name()) == string("trigger"))
             {
-                room->setTrigger(currnode);
+                //room->setTrigger(currnode);
             }
             else if(string(currnode->name())== string("border"))
             {
@@ -199,7 +202,7 @@ void Map::node2obj() {
             }
             else if(string(currnode->name()) == string("trigger"))
             {
-                item->setTrigger(currnode);
+                //item->setTrigger(currnode);
             }
 
             if(currnode->next_sibling() == NULL)
@@ -226,7 +229,7 @@ void Map::node2obj() {
             } else if (string(currnode->name()) == string("accept")) {
                 container->addAccept(currnode->value());
             } else if (string(currnode->name()) == string("trigger")) {
-                container->setTrigger(currnode);
+                //container->setTrigger(currnode);
             } else if (string(currnode->name()) == string("description")) {
                 container->setDescription(currnode->value());
             }
@@ -250,7 +253,7 @@ void Map::node2obj() {
                 } else if (string(currnode->name()) == string("status")) {
                     creature->setStatus(currnode->value());
                 } else if (string(currnode->name()) == string("trigger")) {
-                    creature->setTrigger(currnode);
+                    //creature->setTrigger(currnode);
                 } else if (string(currnode->name()) == string("description")) {
                     creature->setDescription(currnode->value());
                 } else if (string(currnode->name()) == string("vulnerability")) {
@@ -268,19 +271,6 @@ void Map::node2obj() {
         }
 
 
-}
-
-vector<string> Map::split(string &s, char delim) {
-    cout<<"Input String = "<< s<<endl;
-    vector<string> elems;
-    stringstream ss;
-    ss.str(s);
-    string item;
-    while (getline(ss, item, delim)) {
-        elems.push_back(item);
-        cout<<item<<endl;
-    }
-    return elems;
 }
 
 Room* Map::getRoom(string name) {

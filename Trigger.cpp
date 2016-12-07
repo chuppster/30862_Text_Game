@@ -7,6 +7,10 @@
 Trigger::~Trigger(){};
 Trigger::Trigger() {}
 
+void Trigger::printTrigger() {
+    cout<<print<<endl;
+}
+
 void Trigger::setup(xml_node<>* node)
 {
     xml_node<>* currnode = node->first_node();
