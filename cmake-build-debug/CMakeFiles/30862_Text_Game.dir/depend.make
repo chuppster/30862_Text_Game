@@ -3,42 +3,85 @@
 
 CMakeFiles/30862_Text_Game.dir/Base.cpp.obj: ../Base.cpp
 CMakeFiles/30862_Text_Game.dir/Base.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/Base.cpp.obj: ../Condition.h
+CMakeFiles/30862_Text_Game.dir/Base.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/Base.cpp.obj: ../rapidxml.hpp
+
+CMakeFiles/30862_Text_Game.dir/Border.cpp.obj: ../Border.cpp
+CMakeFiles/30862_Text_Game.dir/Border.cpp.obj: ../Border.h
+CMakeFiles/30862_Text_Game.dir/Border.cpp.obj: ../rapidxml.hpp
+
+CMakeFiles/30862_Text_Game.dir/Condition.cpp.obj: ../Condition.cpp
+CMakeFiles/30862_Text_Game.dir/Condition.cpp.obj: ../Condition.h
 
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Condition.h
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Container.cpp
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Container.h
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Item.h
+CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Turnon.h
+CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../rapidxml.hpp
 
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: ../Condition.h
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: ../Creature.cpp
 CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: ../Creature.h
+CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj: ../rapidxml.hpp
 
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Condition.h
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Item.cpp
 CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Item.h
+CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../Turnon.h
+CMakeFiles/30862_Text_Game.dir/Item.cpp.obj: ../rapidxml.hpp
 
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Border.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Condition.h
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Container.h
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Creature.h
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Item.h
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Map.cpp
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Map.h
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Room.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../Turnon.h
 CMakeFiles/30862_Text_Game.dir/Map.cpp.obj: ../rapidxml.hpp
 
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Border.h
+CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Condition.h
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Container.h
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Creature.h
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Item.h
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Room.cpp
 CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Room.h
+CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../Turnon.h
+CMakeFiles/30862_Text_Game.dir/Room.cpp.obj: ../rapidxml.hpp
+
+CMakeFiles/30862_Text_Game.dir/Trigger.cpp.obj: ../Condition.h
+CMakeFiles/30862_Text_Game.dir/Trigger.cpp.obj: ../Trigger.cpp
+CMakeFiles/30862_Text_Game.dir/Trigger.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/Trigger.cpp.obj: ../rapidxml.hpp
+
+CMakeFiles/30862_Text_Game.dir/Turnon.cpp.obj: ../Turnon.cpp
+CMakeFiles/30862_Text_Game.dir/Turnon.cpp.obj: ../Turnon.h
+CMakeFiles/30862_Text_Game.dir/Turnon.cpp.obj: ../rapidxml.hpp
 
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Base.h
+CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Border.h
+CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Condition.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Container.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Creature.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Item.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Map.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Room.h
+CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Trigger.h
+CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../Turnon.h
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml.hpp
 CMakeFiles/30862_Text_Game.dir/main.cpp.obj: ../rapidxml_utils.hpp

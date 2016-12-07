@@ -28,11 +28,7 @@ int main() {
     char currxml[len];
     f.read(currxml, len);
     f.close();
-    int i = 0;
-    while(i<len){
-        std::cout << currxml[i];
-        i++;
-    }
+
     xml_document<> doc;
     try {
         doc.parse<0>(currxml);
@@ -45,9 +41,10 @@ int main() {
 
     xml_node<> *node = doc.first_node();
 
-    print_xml(node);
+    //print_xml(node);
 
     map = build_map(node);
+    map->node2obj();
 
     return 0;
 }
@@ -60,35 +57,35 @@ Map* build_map(xml_node<>* firstnode) {
 
     Map *map = new Map();
 
-    while (currnode != NULL)
+    while (true)
     {
-        if(strcmp(currnode->name(),"room"))
+        if(string(currnode->name())== string("room"))
         {
-            //map->rooms.push_back(currnode);
-            cout << "Added Room " << currnode->name() << endl;
+            map->rooms.push_back(currnode);
+            //cout << "Added Room " << currnode->name() << endl;
         }
-        if(strcmp(currnode->name(),"item"))
+        else if(string(currnode->name())== string("item"))
         {
-            //map->items.push_back(currnode);
-            cout << "Added Item " << currnode->name() << endl;
+            map->items.push_back(currnode);
+            //cout << "Added Item " << currnode->name() << endl;
         }
-        if(strcmp(currnode->name(),"container"))
+        else if(string(currnode->name())== string("container"))
         {
-            //map->containers.push_back(currnode);
-            cout << "Added Container " << currnode->name() << endl;
+            map->containers.push_back(currnode);
+            //cout << "Added Container " << currnode->name() << endl;
         }
-        if(strcmp(currnode->name(),"creature"))
+        else if(string(currnode->name())== string("creature"))
         {
-            //map->creatures.push_back(currnode);
-            cout << "Added Creature " << currnode->name() << endl;
+            map->creatures.push_back(currnode);
+            //cout << "Added Creature " << currnode->name() << endl;
         }
-        currnode = currnode->first_node();
+        if(currnode->next_sibling() == NULL)
+        {break;}
+        currnode = currnode->next_sibling();
 
     }
 
-    cout << currnode->name() << endl;
-
-    return NULL;
+    return map;
 }
 
 void print_xml(xml_node<>* node)

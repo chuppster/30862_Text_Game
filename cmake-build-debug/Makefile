@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.2.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Adrian\Documents\GitHub\30862_Text_Game
+CMAKE_SOURCE_DIR = C:\Users\adria_000\Documents\GitHub\30862_Text_Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Adrian\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\adria_000\Documents\GitHub\30862_Text_Game\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -148,6 +148,60 @@ Base.s: Base.cpp.s
 Base.cpp.s:
 	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Base.cpp.s
 .PHONY : Base.cpp.s
+
+Border.obj: Border.cpp.obj
+
+.PHONY : Border.obj
+
+# target to build an object file
+Border.cpp.obj:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Border.cpp.obj
+.PHONY : Border.cpp.obj
+
+Border.i: Border.cpp.i
+
+.PHONY : Border.i
+
+# target to preprocess a source file
+Border.cpp.i:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Border.cpp.i
+.PHONY : Border.cpp.i
+
+Border.s: Border.cpp.s
+
+.PHONY : Border.s
+
+# target to generate assembly for a file
+Border.cpp.s:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Border.cpp.s
+.PHONY : Border.cpp.s
+
+Condition.obj: Condition.cpp.obj
+
+.PHONY : Condition.obj
+
+# target to build an object file
+Condition.cpp.obj:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Condition.cpp.obj
+.PHONY : Condition.cpp.obj
+
+Condition.i: Condition.cpp.i
+
+.PHONY : Condition.i
+
+# target to preprocess a source file
+Condition.cpp.i:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Condition.cpp.i
+.PHONY : Condition.cpp.i
+
+Condition.s: Condition.cpp.s
+
+.PHONY : Condition.s
+
+# target to generate assembly for a file
+Condition.cpp.s:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Condition.cpp.s
+.PHONY : Condition.cpp.s
 
 Container.obj: Container.cpp.obj
 
@@ -284,6 +338,60 @@ Room.cpp.s:
 	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Room.cpp.s
 .PHONY : Room.cpp.s
 
+Trigger.obj: Trigger.cpp.obj
+
+.PHONY : Trigger.obj
+
+# target to build an object file
+Trigger.cpp.obj:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Trigger.cpp.obj
+.PHONY : Trigger.cpp.obj
+
+Trigger.i: Trigger.cpp.i
+
+.PHONY : Trigger.i
+
+# target to preprocess a source file
+Trigger.cpp.i:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Trigger.cpp.i
+.PHONY : Trigger.cpp.i
+
+Trigger.s: Trigger.cpp.s
+
+.PHONY : Trigger.s
+
+# target to generate assembly for a file
+Trigger.cpp.s:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Trigger.cpp.s
+.PHONY : Trigger.cpp.s
+
+Turnon.obj: Turnon.cpp.obj
+
+.PHONY : Turnon.obj
+
+# target to build an object file
+Turnon.cpp.obj:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Turnon.cpp.obj
+.PHONY : Turnon.cpp.obj
+
+Turnon.i: Turnon.cpp.i
+
+.PHONY : Turnon.i
+
+# target to preprocess a source file
+Turnon.cpp.i:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Turnon.cpp.i
+.PHONY : Turnon.cpp.i
+
+Turnon.s: Turnon.cpp.s
+
+.PHONY : Turnon.s
+
+# target to generate assembly for a file
+Turnon.cpp.s:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Turnon.cpp.s
+.PHONY : Turnon.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -323,6 +431,12 @@ help:
 	@echo ... Base.obj
 	@echo ... Base.i
 	@echo ... Base.s
+	@echo ... Border.obj
+	@echo ... Border.i
+	@echo ... Border.s
+	@echo ... Condition.obj
+	@echo ... Condition.i
+	@echo ... Condition.s
 	@echo ... Container.obj
 	@echo ... Container.i
 	@echo ... Container.s
@@ -338,6 +452,12 @@ help:
 	@echo ... Room.obj
 	@echo ... Room.i
 	@echo ... Room.s
+	@echo ... Trigger.obj
+	@echo ... Trigger.i
+	@echo ... Trigger.s
+	@echo ... Turnon.obj
+	@echo ... Turnon.i
+	@echo ... Turnon.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

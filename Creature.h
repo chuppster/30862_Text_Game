@@ -13,14 +13,14 @@ using namespace std;
 
 class Creature : public Base{
 private:
-    vector<string> vulner;
-    string attack;
+    vector<char*> vulner;
+    char* attack;
 public:
-    vector<string> getVulner();
-    void addVulner(string _vulner);
-    void removeVulner(string _vulner);
-    string getAttack();
-    void setAttack(string _attack);
+    vector<char*> getVulner();
+    void addVulner(char* _vulner);
+    void removeVulner(char* _vulner);
+    char* getAttack();
+    void setAttack(char* _attack);
 
     Creature();
     virtual ~Creature();

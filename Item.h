@@ -5,20 +5,19 @@
 #ifndef INC_30862_TEXT_GAME_ITEM_H
 #define INC_30862_TEXT_GAME_ITEM_H
 #include <iostream>
-#include <string>
 #include "Base.h"
+#include "Turnon.h"
 
 using namespace std;
 
 class Item : public Base{
 private:
-    string writing;
-    string turn_on;
+    char* writing;
+    Turnon turn_on;
 public:
-    void setWriting(string _writing);
-    void setTurn_on(string _turn_on);
-    string getWriting();
-    string getTurn_on();
+    void setWriting(char* _writing);
+    void setTurn_on(xml_node<>* node);
+    char* getWriting();
 
     Item();
     virtual ~Item();

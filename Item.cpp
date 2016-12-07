@@ -7,15 +7,12 @@
 Item::Item() {}
 Item::~Item(){}
 
-void Item::setWriting(string _writing){
+void Item::setWriting(char* _writing){
     writing = _writing;
 }
-void Item::setTurn_on(string _turn_on){
-    turn_on = _turn_on;
+void Item::setTurn_on(xml_node<>* node){
+    turn_on.set(node);
 }
-string Item::getWriting(){
+char* Item::getWriting(){
     return writing;
-}
-string Item::getTurn_on(){
-    return turn_on;
 }

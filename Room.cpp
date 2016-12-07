@@ -12,66 +12,60 @@ string Room::getType()
     return type;
 }
 
-std::vector<std::string> Room::getBorder()
+vector<Border*> Room::getBorder()
 {
     return border;
 }
-vector<Container> Room::getContainer()
+vector<char*> Room::getContainer()
 {
     return container;
 }
-vector<Item> Room::getItem(){
+vector<char*> Room::getItem(){
     return item;
 }
-vector<Creature> Room::getCreature(){
+vector<char*> Room::getCreature(){
     return creature;
 }
 void Room::setType(string _type){
     type = _type;
 }
-void Room::addBorder(std::string _border){
-    border.push_back(_border);
+void Room::addBorder(xml_node<>* node){
+    Border* currborder = new Border;
+    currborder->set(node);
+    border.push_back(currborder);
 }
-void Room::addContainer(Container _container){
+void Room::addContainer(char* _container){
     container.push_back(_container);
 }
-void Room::addItem(Item _item){
+void Room::addItem(char* _item){
     item.push_back(_item);
 }
-void Room::addCreature(Creature _creature){
+void Room::addCreature(char* _creature){
     creature.push_back(_creature);
 }
-void Room::removeBorder(std::string _border){
-    for (std::vector<std::string>::iterator it = border.begin() ; it != border.end(); ++it)
+
+void Room::removeContainer(char* _container){
+    for (std::vector<char*>::iterator it = container.begin() ; it != container.end(); ++it)
     {
-        if (*it == _border)
-        {
-            border.erase(it);
-        }
-    }
-}
-void Room::removeContainer(Container _container){
-    for (std::vector<Container>::iterator it = container.begin() ; it != container.end(); ++it)
-    {
-        if ((it)->getName() == _container.getName())
+        if (string(*it) == string(_container))
         {
             container.erase(it);
         }
     }
 }
-void Room::removeItem(Item _item){
-    for (std::vector<Item>::iterator it = item.begin() ; it != item.end(); ++it)
+void Room::removeItem(char* _item){
+    for (std::vector<char*>::iterator it = item.begin() ; it != item.end(); ++it)
     {
-        if ((it)->getName() == _item.getName())
+        if (string(*it) == string(_item))
         {
             item.erase(it);
         }
     }
 }
-void Room::removeCreature(Creature _creature){
-    for (std::vector<Creature>::iterator it = creature.begin() ; it != creature.end(); ++it)
+void Room::removeCreature(char* _creature){
+    for (std::vector<char*>::iterator it = creature.begin() ; it != creature.end(); ++it)
     {
-        if ((it)->getName() == _creature.getName())
+        if (string(*it) == string(_creature))
         {
             creature.erase(it);
         }

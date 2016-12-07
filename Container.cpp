@@ -6,40 +6,40 @@
 Container::Container(){}
 Container::~Container(){}
 
-vector<Item> Container::getItem(){
+vector<char*> Container::getItem(){
     return item;
 }
-vector<Item> Container::getAccept(){
+vector<char*> Container::getAccept(){
     return accept;
 }
-void Container::removeItem(Item _item){
-    for (std::vector<Item>::iterator it = item.begin() ; it != item.end(); ++it)
+void Container::removeItem(char* _item){
+    for (std::vector<char*>::iterator it = item.begin() ; it != item.end(); ++it)
     {
-        if ((it)->getName() == _item.getName())
+        if (string(*it) == string(_item))
         {
             item.erase(it);
         }
     }
 }
-void Container::removeAccept(Item _item) {
-    for (std::vector<Item>::iterator it = accept.begin(); it != accept.end(); ++it) {
-        if ((it)->getName() == _item.getName()) {
+void Container::removeAccept(char* _item) {
+    for (std::vector<char*>::iterator it = accept.begin(); it != accept.end(); ++it) {
+        if (string(*it) == string(_item)) {
             accept.erase(it);
         }
     }
 }
-bool Container::isAccepted(Item _item){
-    for (std::vector<Item>::iterator it = accept.begin(); it != accept.end(); ++it) {
-        if ((it)->getName() == _item.getName()) {
+bool Container::isAccepted(char* _item){
+    for (std::vector<char*>::iterator it = accept.begin(); it != accept.end(); ++it) {
+        if (string(*it) == string(_item)) {
             return true;
         }
     }
     return false;
 }
 
-void Container::addItem(Item _item){
+void Container::addItem(char* _item){
     item.push_back(_item);
 }
-void Container::addAccept(Item _item){
+void Container::addAccept(char* _item){
     accept.push_back(_item);
 }

@@ -7,14 +7,14 @@
 Creature::Creature() {}
 Creature::~Creature() {}
 
-vector<string> Creature::getVulner(){
+vector<char*> Creature::getVulner(){
     return vulner;
 }
-void Creature::addVulner(string _vulner){
+void Creature::addVulner(char* _vulner){
     vulner.push_back(_vulner);
 }
-void Creature::removeVulner(string _vulner){
-    for (std::vector<std::string>::iterator it = vulner.begin() ; it != vulner.end(); ++it)
+void Creature::removeVulner(char* _vulner){
+    for (std::vector<char*>::iterator it = vulner.begin() ; it != vulner.end(); ++it)
     {
         if (*it == _vulner)
         {
@@ -22,9 +22,9 @@ void Creature::removeVulner(string _vulner){
         }
     }
 }
-string Creature::getAttack(){
+char* Creature::getAttack(){
     return attack;
 }
-void Creature::setAttack(string _attack){
+void Creature::setAttack(char* _attack){
     attack=_attack;
 }

@@ -16,7 +16,7 @@ std::string Base::getStatus(){
 std::string Base::getDescription(){
     return  description;
 }
-std::vector<std::string> Base::getTrigger(){
+Trigger Base::getTrigger(){
     return trigger;
 }
 void Base::setName(std::string _name){
@@ -28,17 +28,8 @@ void Base::setStatus(std::string _status){
 void Base::setDescription(std::string _description){
     description = _description;
 }
-void Base::addTrigger(std::string _trigger){
-    trigger.push_back(_trigger);
-}
-void Base::removeTrigger(std::string _trigger) {
-    for (std::vector<std::string>::iterator it = trigger.begin() ; it != trigger.end(); ++it)
-    {
-        if (*it == _trigger)
-        {
-            trigger.erase(it);
-        }
-    }
+void Base::setTrigger(xml_node<>* node){
+    trigger.setup(node);
 }
 
 void Base::printVec(std::vector<std::string> vec){

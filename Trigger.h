@@ -6,14 +6,23 @@
 #define INC_30862_TEXT_GAME_TRIGGER_H
 #include <iostream>
 #include <string>
-#include "Room.h"
+#include "rapidxml.hpp"
+#include "Condition.h"
 
 using namespace std;
-
+using namespace rapidxml;
 class Trigger
 {
 public:
-    string
+    char* type;
+    char* command;
+    char* print;
+    char* action;
+    Condition condition;
+
+    Trigger();
+    virtual ~Trigger();
+    void setup(xml_node<>* node);
 };
 
 #endif //INC_30862_TEXT_GAME_TRIGGER_H

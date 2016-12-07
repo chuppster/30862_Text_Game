@@ -20,8 +20,15 @@ public:
     vector<xml_node<>*> items;
     vector<xml_node<>*> containers;
     vector<xml_node<>*> creatures;
+    vector<Room*> roomVec;
+    vector<Item*> itemVec;
+    vector<Container*> containVec;
+    vector<Creature*> creatureVec;
+    void node2obj();
     Map();
     virtual ~Map();
 };
+
+
 
 #endif //INC_30862_TEXT_GAME_MAP_H

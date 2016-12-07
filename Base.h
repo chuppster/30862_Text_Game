@@ -7,6 +7,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Trigger.h"
+using namespace rapidxml;
 using namespace std;
 
 class Base{
@@ -14,17 +16,16 @@ private:
     std::string name;
     std::string status;
     std::string description;
-    std::vector<string> trigger;
+    Trigger trigger;
 public:
     std::string getName();
     std::string getStatus();
     std::string getDescription();
-    std::vector<std::string> getTrigger();
+    Trigger getTrigger();
     void setName(std::string _name);
     void setStatus(std::string _status);
     void setDescription(std::string _description);
-    void addTrigger(std::string _trigger);
-    void removeTrigger(std::string _trigger);
+    void setTrigger(xml_node<>* node);
     void printVec(std::vector<std::string> vec);
 
     Base();

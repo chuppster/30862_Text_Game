@@ -13,16 +13,16 @@ using namespace std;
 
 class Container : public Base{
 private:
-    vector<Item> item;
-    vector<Item> accept;
+    vector<char*> item;
+    vector<char*> accept;
 public:
-    vector<Item> getItem();
-    vector<Item> getAccept();
-    void removeItem(Item _item);
-    void removeAccept(Item _item);
-    bool isAccepted(Item _item);
-    void addItem(Item _item);
-    void addAccept(Item _item);
+    vector<char*> getItem();
+    vector<char*> getAccept();
+    void removeItem(char* _item);
+    void removeAccept(char* _item);
+    bool isAccepted(char* _item);
+    void addItem(char* _item);
+    void addAccept(char* _item);
 
     Container();
     virtual ~Container();
