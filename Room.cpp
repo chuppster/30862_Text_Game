@@ -3,9 +3,47 @@
 //
 
 #include "Room.h"
+#include "Map.h"
 
 Room::Room(){}
 Room::~Room(){}
+
+string Room::getBorderRoom(string dir)
+{
+    for(unsigned int i = 0; i < border.size(); i++)
+    {
+        if(dir == "n")
+        {
+            if(border.operator[](i)->direction == "north")
+            {
+                return string(border.operator[](i)->name);
+            }
+        }
+        if(dir == "s")
+        {
+            if(border.operator[](i)->direction == "south")
+            {
+                return string(border.operator[](i)->name);
+            }
+        }
+        if(dir == "e")
+        {
+            if(border.operator[](i)->direction == "east")
+            {
+                return string(border.operator[](i)->name);
+            }
+        }
+        if(dir == "w")
+        {
+            if(border.operator[](i)->direction == "west")
+            {
+                return string(border.operator[](i)->name);
+            }
+        }
+    }
+
+    return NULL;
+}
 
 bool Room::checkTrigger(string _command)
 {

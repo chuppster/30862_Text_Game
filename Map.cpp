@@ -22,6 +22,7 @@ void Map::run()
     bool exit = false;
     Room* room;
     string input;
+    string border_room;
     unsigned int i;//finding the entrance
     for(i = 0; i < roomVec.size(); i++)
     {
@@ -47,6 +48,10 @@ void Map::run()
         if(input == string("n") || input == string("s") || input == string("e") || input == string("w"))
         {
             triggered = room->checkTrigger(input);
+            if(!triggered)
+            {
+                border_room = room->getBorderRoom();
+            }
         }
         else if(input == string("i"))
         {

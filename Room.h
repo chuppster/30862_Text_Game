@@ -23,6 +23,7 @@ private:
     vector<char*> item;
     vector<char*> creature;
 public:
+    string Room::getBorderRoom(string dir);
     bool checkTrigger(string _command);
     char* getType();
     vector<Border*> getBorder();
