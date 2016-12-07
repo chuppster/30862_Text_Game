@@ -23,7 +23,6 @@ private:
     vector<char*> item;
     vector<char*> creature;
 public:
-    string Room::getBorderRoom(string dir);
     bool checkTrigger(string _command);
     char* getType();
     vector<Border*> getBorder();
@@ -38,6 +37,7 @@ public:
     void removeContainer(char* _container);
     void removeItem(char* _item);
     void removeCreature(char* _creature);
+    string getBorderRoom(string dir);
 
     Room();
     virtual ~Room();

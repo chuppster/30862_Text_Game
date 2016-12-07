@@ -22,9 +22,9 @@ private:
     vector<xml_node<>*> items;
     vector<xml_node<>*> containers;
     vector<xml_node<>*> creatures;
-    void split(const std::string &s, char delim, std::vector<std::string> &elems);
-    std::vector<std::string> split(const std::string &s, char delim);
+    vector<string> split(string &s, char delim);
 public:
+    Room* getRoom(string name);
     vector<Room*> roomVec;
     vector<Item*> itemVec;
     vector<Container*> containVec;

@@ -3,7 +3,6 @@
 //
 
 #include "Room.h"
-#include "Map.h"
 
 Room::Room(){}
 Room::~Room(){}
@@ -42,7 +41,7 @@ string Room::getBorderRoom(string dir)
         }
     }
 
-    return NULL;
+    return string("");
 }
 
 bool Room::checkTrigger(string _command)

@@ -21,21 +21,17 @@ void Map::run()
     vector<string>* inventory;
     bool exit = false;
     Room* room;
-    string input;
+    char* input;
     string border_room;
+
     unsigned int i;//finding the entrance
-    for(i = 0; i < roomVec.size(); i++)
-    {
-        if(string(roomVec.operator[](i)->getName()) == string("Entrance"))
-        {
-            room = roomVec.operator[](i);
-        }
-    }
+    room = getRoom(string("Entrance"));
     room->printDesc();//print the description of the entrance
     bool triggered = false;
     while(exit == false)//let's loop until we exit
     {
-        cin >> input;//get the command
+        cin.get(input, 256);//get the command
+        cout<<"Input was: "<<input<< endl;
 
         //check if triggers override command
 
@@ -50,7 +46,13 @@ void Map::run()
             triggered = room->checkTrigger(input);
             if(!triggered)
             {
-                border_room = room->getBorderRoom();
+                border_room = room->getBorderRoom(input);
+                if(border_room == string(""))
+                {
+                    cout<<"Can't go that way."<<endl;
+                } else{
+                    room = getRoom(border_room);
+                }
             }
         }
         else if(input == string("i"))
@@ -66,11 +68,11 @@ void Map::run()
                 {cout << inventory->operator[](i);}
             }
         }
-        else if(input.find("take") != string::npos)//take command
+        else if(string(input).find("take") != string::npos)//take command
         {
             //split the string
-            vector<string> item = split(input, ' ');
-            cout << "Split: " << item.front() << endl;//not splitting properly
+            //vector<string> item = split(*string(input), ' ');
+            //cout << "Split: " << item.front() << endl;//not splitting properly
         }
 
             //check for triggers
@@ -269,20 +271,25 @@ void Map::node2obj() {
 
 }
 
-void Map::split(const std::string &s, char delim, std::vector<std::string> &elems) {
-    std::stringstream ss;
+vector<string> Map::split(string &s, char delim) {
+    cout<<"Input String = "<< s<<endl;
+    vector<string> elems;
+    stringstream ss;
     ss.str(s);
-    std::string item;
-    while (std::getline(ss, item, delim)) {
+    string item;
+    while (getline(ss, item, delim)) {
         elems.push_back(item);
+        cout<<item<<endl;
     }
-}
-
-
-std::vector<std::string> Map::split(const std::string &s, char delim) {
-    std::vector<std::string> elems;
-    split(s, delim, elems);
     return elems;
 }
 
-
+Room* Map::getRoom(string name) {
+    for(unsigned int i = 0; i < roomVec.size(); i++)
+    {
+        if(string(roomVec.operator[](i)->getName()) == name)
+        {
+            return(roomVec.operator[](i));
+        }
+    }
+}
