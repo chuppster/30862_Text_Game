@@ -34,6 +34,7 @@ void Map::run()
     bool triggered = false;
     while(exit == false)//let's loop until we exit
     {
+        while(checkCreatureTriggers()){}
         getline(cin, input);
         if(input != string("")) {
             input_vec = split(input, ' ');
@@ -137,34 +138,39 @@ bool Map::checkCreatureTriggers() {
     Item* obj;//the current object
     bool fired = false;
     for(unsigned int i = 0; i<creatureVec.size(); i++) {//for each creature
-        cout<<"Creature Iterator"<<endl;
+        //cout<<"Creature Iterator"<<endl;
         currtrig = creatureVec.operator[](i)->getTrigger();
         if(currtrig != NULL){//if they have a trigger
-            cout<<"Trigger Found: "<< currtrig->print<<endl;
+            //cout<<"Trigger Found: "<< currtrig->print<<endl;
             cond = currtrig->condition;
-            for(unsigned int j = 0; j < itemVec.size(); i++)//check the items to see if it matches with the condition
+            for(unsigned int j = 0; j < itemVec.size(); j++)//check the items to see if it matches with the condition
             {
-                cout<<"Look for Match"<<endl;
-                obj = itemVec.operator[](i);
+                //cout<<"Look for Match "<<itemVec.size()<<endl;
+                obj = itemVec.operator[](j);
+                if(obj == NULL)
+                {cout<<"NULL POINTER"<<endl;}
                 if(obj->getName() == string(cond->object))//if it does, check the status
                 {
-                    cout<<"current object has same name as condition"<<endl;
+                    //cout<<"current object has same name as condition"<<endl;
                     if(obj->getStatus() == string(cond->status))//if the status is right
                     {
-                        cout<<"Status is the same!"<<endl;
+                        //cout<<"Status is the same!"<<endl;
                         cout<<currtrig->print<<endl;
                         if((currtrig->type) != string("permanent"))
                         {
+                            cout<<"Try and get rid of trigger"<<endl;
                             obj->setTrigger(NULL);
+                            cout<<"Removed Trigger"<<endl;
                         }
+                        cout<<"Made it out"<<endl;
                         fired = true;
                     }
                 }
+                //cout<<"Check Iterator"<<endl;
             }
 
         }
     }
-    cout<<"returning"<<endl;
     return fired;
 }
 
