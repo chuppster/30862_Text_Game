@@ -5,7 +5,8 @@
 #include <string>
 #include "Turnon.h"
 
-Turnon::Turnon() {}
+Turnon::Turnon() {
+}
 Turnon::~Turnon() {}
 
 void Turnon::set(xml_node<>* node)

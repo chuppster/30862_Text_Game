@@ -13,11 +13,12 @@ using namespace std;
 class Item : public Base{
 private:
     char* writing;
-    Turnon turn_on;
+    Turnon* turn_on;
 public:
     void setWriting(char* _writing);
     void setTurn_on(xml_node<>* node);
     char* getWriting();
+    Turnon* getTurnon();
 
     Item();
     virtual ~Item();

@@ -42,7 +42,7 @@ void Map::run()
         }
 
         //check if triggers override command
-
+        while(checkCreatureTriggers()){}
         //execute command if not overridden
 
         //check if the effects of command activate trigger
@@ -101,12 +101,125 @@ void Map::run()
                }
             }
         }
+        else if(in1 == string("read"))//read command
+        {
+            curritem=input_vec.operator[](1);
+            for(auto a = inventory.begin(); a != inventory.end(); ++a)
+            {
+                if(*a == curritem)
+                {
+                    readItem(curritem);
+                }
+            }
+        }
+        else if(in1 == string("turn"))//read command
+        {
+            curritem=input_vec.operator[](2);
+            for(auto a = inventory.begin(); a != inventory.end(); ++a)
+            {
+                if(*a == curritem)
+                {
+                    turnOnItem(curritem);
+                }
+            }
+        }
 
         if(in1 == string("exit"))
         {exit = true;}
     }
 
 
+}
+
+bool Map::checkCreatureTriggers() {
+    Trigger* currtrig;
+    Condition* cond;//the current condition
+    Item* obj;//the current object
+    bool fired = false;
+    for(unsigned int i = 0; i<creatureVec.size(); i++) {//for each creature
+        cout<<"Creature Iterator"<<endl;
+        currtrig = creatureVec.operator[](i)->getTrigger();
+        if(currtrig != NULL){//if they have a trigger
+            cout<<"Trigger Found: "<< currtrig->print<<endl;
+            cond = currtrig->condition;
+            for(unsigned int j = 0; j < itemVec.size(); i++)//check the items to see if it matches with the condition
+            {
+                cout<<"Look for Match"<<endl;
+                obj = itemVec.operator[](i);
+                if(obj->getName() == string(cond->object))//if it does, check the status
+                {
+                    cout<<"current object has same name as condition"<<endl;
+                    if(obj->getStatus() == string(cond->status))//if the status is right
+                    {
+                        cout<<"Status is the same!"<<endl;
+                        cout<<currtrig->print<<endl;
+                        if((currtrig->type) != string("permanent"))
+                        {
+                            obj->setTrigger(NULL);
+                        }
+                        fired = true;
+                    }
+                }
+            }
+
+        }
+    }
+    cout<<"returning"<<endl;
+    return fired;
+}
+
+void Map::updateItem(string _item, string _status) {
+    for(unsigned int i = 0; i<itemVec.size(); i++)
+    {
+        if(itemVec.operator[](i)->getName() == _item) {
+            itemVec.operator[](i)->setStatus(_status);
+        }
+    }
+}
+
+void Map::turnOnItem(string _name) {
+    string action;
+    vector<string> actions;
+    string item;
+    string status;
+    for(unsigned int i = 0; i<itemVec.size(); i++)
+    {
+        if(itemVec.operator[](i)->getName() == _name)
+        {
+            Turnon* curr = itemVec.operator[](i)->getTurnon();
+            if(curr != NULL)
+            {
+                cout<<curr->print<<endl;
+                action = curr->action;
+                actions = split(action, ' ');
+                item = actions.operator[](1);
+                status = actions.operator[](3);
+                updateItem(item, status);
+            }
+            else
+            {cout<<"You can't turn that on"<<endl;}
+        }
+
+    }
+
+}
+
+void Map::readItem(string _name) {
+    for(unsigned int i = 0; i<itemVec.size(); i++)
+    {
+        if(itemVec.operator[](i)->getName() == _name)
+        {
+            if(itemVec.operator[](i)->getWriting() != NULL)
+            {
+                cout<<itemVec.operator[](i)->getWriting()<<endl;
+            }
+            else
+            {
+                cout<<"Nothing Written"<<endl;
+            }
+        }
+
+    }
 }
 
 void Map::build_map(xml_node<>* firstnode) {

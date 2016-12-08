@@ -4,15 +4,20 @@
 
 #include "Item.h"
 
-Item::Item() {}
+Item::Item() {turn_on=new Turnon;}
 Item::~Item(){}
 
 void Item::setWriting(char* _writing){
     writing = _writing;
 }
 void Item::setTurn_on(xml_node<>* node){
-    turn_on.set(node);
+    turn_on->set(node);
 }
 char* Item::getWriting(){
     return writing;
 }
+
+Turnon* Item::getTurnon() {
+    return turn_on;
+}
+

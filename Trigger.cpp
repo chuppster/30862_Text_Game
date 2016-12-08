@@ -34,24 +34,25 @@ void Trigger::setup(xml_node<>* node)
         }
         if(string(currnode->name()) == string("condition"))
         {
+            condition = new Condition;
             xml_node<>* subnode = currnode->first_node();
             while(true)
             {
                 if(string(subnode->name())== string("has"))
                 {
-                    condition.has = subnode->value();
+                    condition->has = subnode->value();
                 }
                 if(string(subnode->name())== string("object"))
                 {
-                    condition.object = subnode->value();
+                    condition->object = subnode->value();
                 }
                 if(string(subnode->name())== string("owner"))
                 {
-                    condition.owner = subnode->value();
+                    condition->owner = subnode->value();
                 }
                 if(string(subnode->name())== string("status"))
                 {
-                    condition.status = subnode->value();
+                    condition->status = subnode->value();
                 }
                 if(subnode->next_sibling() == NULL)
                 {break;}

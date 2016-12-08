@@ -35,6 +35,10 @@ public:
     Map();
     virtual ~Map();
     vector<string> split(string &s, char delim);
+    void readItem(string _name);
+    void turnOnItem(string _name);
+    void updateItem(string _item, string _status);
+    bool checkCreatureTriggers();
 };
 
 

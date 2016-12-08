@@ -18,7 +18,7 @@ public:
     char* command;
     char* print;
     char* action;
-    Condition condition;
+    Condition* condition;
 
     Trigger();
     virtual ~Trigger();
