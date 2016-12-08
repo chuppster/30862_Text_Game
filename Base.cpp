@@ -38,6 +38,7 @@ void Base::setDescription(std::string _description){
     description = _description;
 }
 void Base::setTrigger(xml_node<>* node){
+    trigger = new Trigger;
     trigger->setup(node);
 }
 

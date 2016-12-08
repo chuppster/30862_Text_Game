@@ -44,6 +44,15 @@ string Room::getBorderRoom(string dir)
     return string("");
 }
 
+bool Room::hasItem(string _item) {
+    for(unsigned int i = 0;i<item.size();i++)
+    {
+        if(string(item.operator[](i)) == _item)
+        {return true;}
+    }
+    return false;
+}
+
 void Room::pullTrigger(){
     getTrigger()->printTrigger();
     if(string(getTrigger()->type) != ("permanent"))
@@ -107,12 +116,12 @@ void Room::removeContainer(char* _container){
         }
     }
 }
-void Room::removeItem(char* _item){
-    for (std::vector<char*>::iterator it = item.begin() ; it != item.end(); ++it)
+void Room::removeItem(string _item){
+    for (unsigned int i = 0; i < item.size();i++)
     {
-        if (string(*it) == string(_item))
+        if (string(item.operator[](i)) == _item)
         {
-            item.erase(it);
+            item.operator[](i)=NULL;
         }
     }
 }

@@ -2,6 +2,7 @@
 // Created by Adrian on 12/5/2016.
 //
 
+#include <cstring>
 #include "Map.h"
 
 Map::Map(){}
@@ -18,11 +19,14 @@ void Map::printRoomObj() {
 
 void Map::run()
 {
-    vector<string>* inventory;
+    vector<string> inventory;
     bool exit = false;
     Room* room;
-    string in1, in2, in3, in4;
+    string in1;
+    string input;
     string border_room;
+    vector<string> input_vec;
+    string curritem;
 
     unsigned int i;//finding the entrance
     room = getRoom(string("Entrance"));
@@ -30,7 +34,12 @@ void Map::run()
     bool triggered = false;
     while(exit == false)//let's loop until we exit
     {
-        cin >> in1 >> in2 >> in3 >> in4;//get the command
+        getline(cin, input);
+        if(input != string("")) {
+            input_vec = split(input, ' ');
+            //cout<<input_vec.operator[](0);
+            in1 = input_vec.operator[](0);
+        }
 
         //check if triggers override command
 
@@ -45,6 +54,7 @@ void Map::run()
             triggered = room->checkTrigger(in1);
             if(!triggered)
             {
+                cout<<"didn't find a trigger"<<endl;
                 border_room = room->getBorderRoom(in1);//gets you the name of the room in that direction
                 if(border_room == string(""))//if you can't find the room
                 {
@@ -54,30 +64,44 @@ void Map::run()
                     cout << room->getDescription() << endl;
                 }
             } else{
+                //cout<<"found a trigger"<<endl;
                 room->pullTrigger();
             }
         }
         else if(in1 == string("i"))
         {
             cout << "Inventory: ";
-            if(inventory->size() == 0)
+            if(inventory.size() == 0)
             {
                 cout << "empty" << endl;
             }
             else
             {
-                for(unsigned int j = 0; j < inventory->size(); i++)
-                {cout << inventory->operator[](i);}
+                for(auto i = inventory.begin(); i != inventory.end(); ++i)
+                {cout << *i << ", ";}
+                cout<<endl;
             }
         }
         else if(in1 == string("take"))//take command
         {
-            //split the string
-            //vector<string> item = split(*string(input), ' ');
-            //cout << "Split: " << item.front() << endl;//not splitting properly
+            curritem=input_vec.operator[](1);
+            for(i=0;i<itemVec.size();i++)
+            {
+                //cout<<"iterate for i= "<<i<<endl;
+               if(itemVec.operator[](i)->getName() == curritem)
+               {
+                   if(room->hasItem(curritem)){
+                       //cout<<"Has the Item"<<endl;
+                       inventory.push_back(curritem);
+                       //cout<<"Inventory: "<<inventory.operator[](0)<<endl;
+                       //cout<<"Removing Item"<<endl;
+                       room->removeItem(curritem);
+                       //cout<<"Removed Item"<<endl;
+                   }
+               }
+            }
         }
 
-            //check for triggers
         if(in1 == string("exit"))
         {exit = true;}
     }
@@ -143,7 +167,7 @@ void Map::node2obj() {
             }
             else if(string(currnode->name()) == string("trigger"))
             {
-                //room->setTrigger(currnode);
+                room->setTrigger(currnode);
             }
             else if(string(currnode->name())== string("border"))
             {
@@ -202,7 +226,7 @@ void Map::node2obj() {
             }
             else if(string(currnode->name()) == string("trigger"))
             {
-                //item->setTrigger(currnode);
+                item->setTrigger(currnode);
             }
 
             if(currnode->next_sibling() == NULL)
@@ -229,7 +253,7 @@ void Map::node2obj() {
             } else if (string(currnode->name()) == string("accept")) {
                 container->addAccept(currnode->value());
             } else if (string(currnode->name()) == string("trigger")) {
-                //container->setTrigger(currnode);
+                container->setTrigger(currnode);
             } else if (string(currnode->name()) == string("description")) {
                 container->setDescription(currnode->value());
             }
@@ -253,7 +277,7 @@ void Map::node2obj() {
                 } else if (string(currnode->name()) == string("status")) {
                     creature->setStatus(currnode->value());
                 } else if (string(currnode->name()) == string("trigger")) {
-                    //creature->setTrigger(currnode);
+                    creature->setTrigger(currnode);
                 } else if (string(currnode->name()) == string("description")) {
                     creature->setDescription(currnode->value());
                 } else if (string(currnode->name()) == string("vulnerability")) {
@@ -281,4 +305,15 @@ Room* Map::getRoom(string name) {
             return(roomVec.operator[](i));
         }
     }
+}
+
+vector<string> Map::split(string &s, char delim) {
+    vector<string> elems;
+    stringstream stream(s);
+    string curr;
+    while(getline(stream, curr, delim))
+    {
+        elems.push_back(curr);
+    }
+    return elems;
 }

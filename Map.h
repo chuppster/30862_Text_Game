@@ -34,7 +34,10 @@ public:
     void run();
     Map();
     virtual ~Map();
+    vector<string> split(string &s, char delim);
 };
+
+
 
 
 

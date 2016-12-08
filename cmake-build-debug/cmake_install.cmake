@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Adrian/Documents/GitHub/30862_Text_Game
+# Install script for directory: C:/Users/adria_000/Documents/GitHub/30862_Text_Game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

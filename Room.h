@@ -36,9 +36,10 @@ public:
     void addItem(char* _item);
     void addCreature(char* _creature);
     void removeContainer(char* _container);
-    void removeItem(char* _item);
+    void removeItem(string _item);
     void removeCreature(char* _creature);
     string getBorderRoom(string dir);
+    bool hasItem(string _item);
 
     Room();
     virtual ~Room();
