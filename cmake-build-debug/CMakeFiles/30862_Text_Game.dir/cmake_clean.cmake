@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/30862_Text_Game.dir/Condition.cpp.obj"
   "CMakeFiles/30862_Text_Game.dir/Border.cpp.obj"
   "CMakeFiles/30862_Text_Game.dir/Turnon.cpp.obj"
+  "CMakeFiles/30862_Text_Game.dir/Attack.cpp.obj"
   "30862_Text_Game.pdb"
   "30862_Text_Game.exe"
   "30862_Text_Game.exe.manifest"

@@ -122,6 +122,33 @@ depend:
 	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/build
 .PHONY : 30862_Text_Game/fast
 
+Attack.obj: Attack.cpp.obj
+
+.PHONY : Attack.obj
+
+# target to build an object file
+Attack.cpp.obj:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Attack.cpp.obj
+.PHONY : Attack.cpp.obj
+
+Attack.i: Attack.cpp.i
+
+.PHONY : Attack.i
+
+# target to preprocess a source file
+Attack.cpp.i:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Attack.cpp.i
+.PHONY : Attack.cpp.i
+
+Attack.s: Attack.cpp.s
+
+.PHONY : Attack.s
+
+# target to generate assembly for a file
+Attack.cpp.s:
+	$(MAKE) -f CMakeFiles\30862_Text_Game.dir\build.make CMakeFiles/30862_Text_Game.dir/Attack.cpp.s
+.PHONY : Attack.cpp.s
+
 Base.obj: Base.cpp.obj
 
 .PHONY : Base.obj
@@ -428,6 +455,9 @@ help:
 	@echo ... 30862_Text_Game
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Attack.obj
+	@echo ... Attack.i
+	@echo ... Attack.s
 	@echo ... Base.obj
 	@echo ... Base.i
 	@echo ... Base.s

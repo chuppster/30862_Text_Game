@@ -5,14 +5,17 @@
 #include "Trigger.h"
 
 Trigger::~Trigger(){};
-Trigger::Trigger() {}
-
+Trigger::Trigger() {used = false;}
+void Trigger::use() {
+    if(string(type) != string("permanent"))
+    {
+        used = true;
+    }
+}
 void Trigger::printTrigger() {
     cout<<print<<endl;
 }
-
-void Trigger::setup(xml_node<>* node)
-{
+void Trigger::setup(xml_node<>* node) {
     xml_node<>* currnode = node->first_node();
     while(true)
     {

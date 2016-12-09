@@ -43,7 +43,13 @@ public:
     void pullTrigger(Base* _item);
     bool inventoryContains(string _item);
     Container* getContainer(string _cont);
+    Creature* getCreature(string _creature);
+    Item* getItemInv(string _item);
+    Item* getItemCont(string _item, string _cont);
+    Item* getItem(string _item);
     bool handleRoomTrig(Room* room, string input);
+    void add(Item* _obj, Container* _cont);
+    void del(string _obj);
 };
 
 

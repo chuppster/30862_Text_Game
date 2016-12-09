@@ -3,6 +3,8 @@
 //
 
 #include <cstring>
+#include <time.h>
+#include <stdlib.h>
 #include "Map.h"
 
 Map::Map(){}
@@ -27,6 +29,14 @@ void Map::run()
     string border_room;
     vector<string> input_vec;
     string curritem;
+    Creature* victim;
+    Item* weapon;
+    string currvulner;
+    bool successfulAttack;
+    Attack* currAttack;
+    Room* currRoom;
+    Item* itemToMove;
+    Container* currCont;
 
     unsigned int i;//finding the entrance
     room = getRoom(string("Entrance"));
@@ -34,21 +44,18 @@ void Map::run()
     bool triggered = false;
     while(exit == false)//let's loop until we exit
     {
+        checkCreatureTriggers(room);
         getline(cin, input);
         if(input != string("")) {
             input_vec = split(input, ' ');
             //cout<<input_vec.operator[](0);
             in1 = input_vec.operator[](0);
         }
-        //cout<<"ROOM: "<<room->getName()<<" BORDER 1: " << room->getBorder().operator[](0)->name << endl;
-
         checkCreatureTriggers(room);
-
         if(in1 == string("n") || in1 == string("s") || in1 == string("e") || in1 == string("w"))
         {
             triggered = handleRoomTrig(room, in1);
             border_room = room->getBorderRoom(in1);//gets you the name of the room in that direction
-            //cout<<"================BORDER ROOM========="<<border_room<<endl;
             if(!triggered){
                 if(border_room == string(""))//if you can't find the room
                 {
@@ -103,25 +110,134 @@ void Map::run()
         }
         else if(in1 == string("turn"))//read command
         {
+            if(input_vec.size() != 3)
+            {
+                cout<<"Error"<<endl;
+                break;
+            }
+            bool fired = false;
             curritem=input_vec.operator[](2);
             for(auto a = inventory.begin(); a != inventory.end(); ++a)
             {
                 if(*a == curritem)
                 {
+                    fired = true;
+                    cout<<"You activate the "<<curritem<<"."<<endl;
                     turnOnItem(curritem);
                 }
             }
+            if(!fired)
+            {cout<<"Does nothing."<<endl;}
+        }
+        else if(in1 == string("attack"))
+        {
+            if(input_vec.size() != 4)
+            {
+                cout<<"Error"<<endl;
+            }
+            else
+            {
+                if(!inventoryContains(input_vec.operator[](3)))//if you don't have the item....
+                {
+                    cout<<"Error"<<endl;
+                }
+                victim = getCreature(input_vec.operator[](1));//get the victim
+                successfulAttack = victim->checkVulner(input_vec.operator[](3));
+                if(successfulAttack)
+                {
+                    currAttack=victim->getAttack();
+                    if(string(getItem(string(currAttack->condition.object))->getStatus()) == currAttack->condition.status)
+                    {
+                        cout<<currAttack->print<<endl;
+                        for(unsigned int u = 0; u < currAttack->action.size(); u++)
+                        {
+                            vector<string> action = split(currAttack->action.operator[](u), ' ');
+                            if(action.operator[](0) == string("Delete"))
+                            {
+                                del(action.operator[](1));
+                            }
+                            else if(action.operator[](0) == string("Add"))
+                            {
+                                currRoom = getRoom(action.operator[](3));
+                                if(currRoom != NULL)
+                                {currRoom->addItem((char*)action.operator[](1).c_str());}
+                                currCont = getContainer(action.operator[](3));
+                                if(currCont != NULL)
+                                {currCont->addItem((char*)action.operator[](1).c_str());}
+                            }
+                        }
+                    }
+
+                }
+
+
+            }
+
         }
         else if(in1 == string("exit"))
-        {exit = true;}
-        else {
-            if (in1 != string("")) {
-            cout << "Error" << endl;
+        {
+            exit = true;
+        }
+        else
+        {
+            if (in1 != string(""))
+            {
+                cout << "Error" << endl;
             }
         }
     }
 
 
+}
+void Map::del(string _obj) {
+
+    for(vector<Room*>::iterator i = roomVec.begin(); i != roomVec.end(); ++i)
+    {
+        if((*i)->getName() == _obj)
+        {
+            delete(*i);
+            roomVec.erase(i);
+        }
+    }
+    for(auto i = creatureVec.begin(); i != creatureVec.end(); ++i)
+    {
+        if((*i)->getName() == _obj)
+        {
+            delete(*i);
+            creatureVec.erase(i);
+        }
+    }
+    for(auto i = itemVec.begin(); i != itemVec.end(); ++i)
+    {
+        if((*i)->getName() == _obj)
+        {
+            delete(*i);
+            itemVec.erase(i);
+        }
+    }
+    for(auto i = containVec.begin(); i != containVec.end(); ++i)
+    {
+        if((*i)->getName() == _obj)
+        {
+            delete(*i);
+            containVec.erase(i);
+        }
+    }
+
+}
+void Map::add(Item* _obj, Container* _cont) {
+    if(_cont->isAccepted(_obj->getName()))
+    {
+        _cont->addItem((char*)(_obj->getName().c_str()));
+    }
+}
+Item* Map::getItem(string _item) {
+    for(unsigned int i = 0; i < itemVec.size(); i++) {
+        if (_item == itemVec.operator[](i)->getName()) {
+            return itemVec.operator[](i);
+        }
+    }
+    return NULL;
 }
 bool Map::handleRoomTrig(Room* room, string input){
     bool triggered = false;
@@ -217,6 +333,59 @@ Container* Map::getContainer(string _cont) {
     }
     return NULL;
 }
+Creature* Map::getCreature(string _creature) {
+    for(unsigned int i = 0; i < creatureVec.size(); i++)
+    {
+        if(_creature == string(creatureVec.operator[](i)->getName()))
+        {
+            return creatureVec.operator[](i);
+        }
+    }
+    return NULL;
+}
+Item* Map::getItemInv(string _item) {
+    string curritem;
+    for(unsigned int i = 0; i < inventory.size(); i++)
+    {
+        if(_item == inventory.operator[](i))
+        {
+            curritem = inventory.operator[](i);
+            for(unsigned int j = 0; j < itemVec.size(); j++)
+            {
+                if(curritem == itemVec.operator[](j)->getName())
+                {
+                    return itemVec.operator[](j);
+                }
+            }
+        }
+    }
+    return NULL;
+}
+Item* Map::getItemCont(string _item, string _cont) {
+    Container* curr;
+    for(unsigned int i = 0; i < containVec.size(); i++)//find the contianer
+    {
+        if(_cont == containVec.operator[](i)->getName())
+        {
+            curr = containVec.operator[](i);
+            for(unsigned int j = 0; j < curr->getItem().size(); j++)
+            {
+                if(_item == string(curr->getItem().operator[](j)))//if the item is in the given container
+                {
+                    for(unsigned int k = 0; k < itemVec.size(); k++)
+                    {
+                        if(_item == itemVec.operator[](k)->getName())
+                        {
+                            return itemVec.operator[](k);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    return NULL;
+}
 bool Map::inventoryContains(string _item) {
     for(auto i = inventory.begin(); i != inventory.end(); ++i)
     {
@@ -243,28 +412,30 @@ bool Map::checkCreatureTriggers(Room* _room) {
     for(unsigned int i = 0; i<creatureVec.size(); i++) {//for each creature
         //if the cureature is in the current room
         if(_room->containsCreature(string(creatureVec.operator[](i)->getName()))) {
-            currtrig = creatureVec.operator[](i)->getTrigger();
-            if (currtrig != NULL)
-            {//if they have a trigger
-                cond = currtrig->condition;
-                for (unsigned int j = 0;
-                     j < itemVec.size(); j++)//check the items to see if it matches with the condition
-                {
-                    obj = itemVec.operator[](j);
-                    if (obj == NULL) { cout << "NULL POINTER" << endl; }
-                    if (obj->getName() == string(cond->object))//if it does, check the status
+            //cout<<"See if "<<creatureVec.operator[](i)->getName()<<" has a trigger"<<endl;
+            if(creatureVec.operator[](i)->hasTrigger())
+            {
+                //cout<<"Made it in!"<<endl;
+                currtrig = creatureVec.operator[](i)->getTrigger();
+                if (currtrig != NULL && !currtrig->used) {//if they have a trigger
+                    cond = currtrig->condition;
+                    for (unsigned int j = 0;
+                         j < itemVec.size(); j++)//check the items to see if it matches with the condition
                     {
-                        if (obj->getStatus() == string(cond->status))//if the status is right
+                        obj = itemVec.operator[](j);
+                        if (obj == NULL) { cout << "NULL POINTER" << endl; }
+                        if (obj->getName() == string(cond->object))//if it does, check the status
                         {
-                            cout << currtrig->print << endl;
-                            if ((currtrig->type) != string("permanent")) {
-                                obj->setTrigger(NULL);
+                            if (obj->getStatus() == string(cond->status))//if the status is right
+                            {
+                                cout << currtrig->print << endl;
+                                currtrig->use();
+                                fired = true;
                             }
-                            fired = true;
                         }
                     }
-                }
 
+                }
             }
         }
     }
@@ -494,7 +665,7 @@ void Map::node2obj() {
                 } else if (string(currnode->name()) == string("vulnerability")) {
                     creature->addVulner(currnode->value());
                 } else if (string(currnode->name()) == string("attack")) {
-                    creature->setAttack(currnode->value());
+                    creature->setAttack(currnode);
                 }
 
 

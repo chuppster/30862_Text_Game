@@ -47,6 +47,13 @@ void Base::setTrigger(xml_node<>* node){
         trigger->setup(node);
     }
 }
+bool Base::hasTrigger() {
+    if(trigger != NULL)
+    {
+        return true;
+    }
+    return false;
+}
 bool Base::checkTrigger(string _command) {
     if(trigger == NULL)
     { return false;}
@@ -55,5 +62,8 @@ bool Base::checkTrigger(string _command) {
         return true;
     }
     return false;
+}
+void Base::delTrigger() {
+
 }
 

@@ -8,19 +8,21 @@
 #include <string>
 #include <vector>
 #include "Base.h"
+#include "Attack.h"
 
 using namespace std;
 
 class Creature : public Base{
 private:
     vector<char*> vulner;
-    char* attack;
+    Attack* attack;
 public:
     vector<char*> getVulner();
     void addVulner(char* _vulner);
     void removeVulner(char* _vulner);
-    char* getAttack();
-    void setAttack(char* _attack);
+    Attack* getAttack();
+    void setAttack(xml_node<>* node);
+    bool checkVulner(string weapon);
 
     Creature();
     virtual ~Creature();

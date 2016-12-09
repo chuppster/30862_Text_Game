@@ -18,12 +18,14 @@ public:
     char* command;
     char* print;
     char* action;
+    bool used;
     Condition* condition;
 
     Trigger();
     virtual ~Trigger();
     void setup(xml_node<>* node);
     void printTrigger();
+    void use();
 };
 
 #endif //INC_30862_TEXT_GAME_TRIGGER_H

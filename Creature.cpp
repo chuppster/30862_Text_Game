@@ -22,9 +22,19 @@ void Creature::removeVulner(char* _vulner){
         }
     }
 }
-char* Creature::getAttack(){
+Attack* Creature::getAttack(){
     return attack;
 }
-void Creature::setAttack(char* _attack){
-    attack=_attack;
+void Creature::setAttack(xml_node<>* _attack){
+    attack->setup(_attack);
+}
+bool Creature::checkVulner(string weapon) {
+    for(unsigned int i = 0; i < vulner.size(); i++)
+    {
+        if(weapon == string(vulner.operator[](i)))
+        {
+            return true;
+        }
+    }
+    return false;
 }

@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.cpp">
+			<Option target="30862_Text_Game"/>
+		</Unit>
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h">
+			<Option target="30862_Text_Game"/>
+		</Unit>
 		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>

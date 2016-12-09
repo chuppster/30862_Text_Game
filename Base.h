@@ -29,9 +29,9 @@ public:
     void setDescription(std::string _description);
     void setTrigger(xml_node<>* node);
     bool checkTrigger(string _command);
-
+    void delTrigger();
+    bool hasTrigger();
     Base();
     virtual ~Base();
-
 };
 #endif //INC_30862_TEXT_GAME_BASE_H

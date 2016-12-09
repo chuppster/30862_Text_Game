@@ -20,7 +20,7 @@ public:
     vector<char*> getAccept();
     void removeItem(char* _item);
     void removeAccept(char* _item);
-    bool isAccepted(char* _item);
+    bool isAccepted(string _item);
     void addItem(char* _item);
     void addAccept(char* _item);
     bool contains(char* _item);

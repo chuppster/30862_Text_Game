@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.cpp
+iostream
+-
+Attack.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h
+
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h
+Condition.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h
+rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+string
+-
+vector
+-
+
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.cpp
 Base.h
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
@@ -63,6 +79,8 @@ vector
 -
 Base.h
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
+Attack.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h
 
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.cpp
 Item.h
@@ -78,6 +96,10 @@ C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Turnon.h
 
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.cpp
 cstring
+-
+time.h
+-
+stdlib.h
 -
 Map.h
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.h

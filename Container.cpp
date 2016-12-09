@@ -28,9 +28,9 @@ void Container::removeAccept(char* _item) {
         }
     }
 }
-bool Container::isAccepted(char* _item){
+bool Container::isAccepted(string _item){
     for (std::vector<char*>::iterator it = accept.begin(); it != accept.end(); ++it) {
-        if (string(*it) == string(_item)) {
+        if (string(*it) == _item) {
             return true;
         }
     }
