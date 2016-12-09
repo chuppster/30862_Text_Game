@@ -91,7 +91,6 @@ void Map::run()
         else if(in1 == string("take"))//take command
         {
             curritem=input_vec.operator[](1);
-            cout<<"Check Room"<<endl;
             for(i=0;i<itemVec.size();i++)
             {
                if(itemVec.operator[](i)->getName() == curritem)
@@ -103,15 +102,16 @@ void Map::run()
                    }
                }
             }
-            cout<<"Check Containers"<<endl;
             for(auto i = containVec.begin(); i != containVec.end(); ++i)
             {
                 Item* contItem = getItemCont(curritem, (*i)->getName());
                 if(contItem != NULL)
                 {
-                    inventory.push_back(contItem->getName());
-                    (*i)->removeItem((char*)(contItem->getName().c_str()));
-                    cout<<"Item "<<contItem->getName()<<" added to inventory"<<endl;
+                    if((*i)->open) {
+                        inventory.push_back(contItem->getName());
+                        (*i)->removeItem((char *)(contItem->getName().c_str()));
+                        cout << "Item " << contItem->getName() << " added to inventory" << endl;
+                    }
                 }
             }
         }
@@ -165,6 +165,7 @@ void Map::run()
             }
             else
             {
+                cout<<"You assault "<<input_vec[1]<< " with " << input_vec[3]<<endl;
                 victim = getCreature(input_vec.operator[](1));//get the victim
                 successfulAttack = victim->checkVulner(input_vec.operator[](3));
                 if(successfulAttack)
@@ -191,12 +192,8 @@ void Map::run()
                             }
                         }
                     }
-
                 }
-
-
             }
-
         }
         else if (in1 == string("open"))
         {
@@ -230,32 +227,32 @@ void Map::del(string _obj) {
     {
         if((*i)->getName() == _obj)
         {
-            delete(*i);
-            roomVec.erase(i);
+            (*i)->del();
+            //roomVec.erase(i);
         }
     }
     for(auto i = creatureVec.begin(); i != creatureVec.end(); ++i)
     {
         if((*i)->getName() == _obj)
         {
-            delete(*i);
-            creatureVec.erase(i);
+            (*i)->del();
+            //creatureVec.erase(i);
         }
     }
     for(auto i = itemVec.begin(); i != itemVec.end(); ++i)
     {
         if((*i)->getName() == _obj)
         {
-            delete(*i);
-            itemVec.erase(i);
+            (*i)->del();
+            //itemVec.erase(i);
         }
     }
     for(auto i = containVec.begin(); i != containVec.end(); ++i)
     {
         if((*i)->getName() == _obj)
         {
-            delete(*i);
-            containVec.erase(i);
+            (*i)->del();
+            //containVec.erase(i);
         }
     }
 

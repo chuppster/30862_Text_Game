@@ -4,8 +4,22 @@
 
 #include "Base.h"
 
-Base::Base(){}
+Base::Base(){alive = true;}
 Base::~Base(){}
+
+void Base::revive()
+{
+    alive = true;
+}
+
+bool Base::exists()
+{
+    return alive;
+}
+
+void Base::del() {
+    alive = false;
+}
 
 void Base::removeTrigger()
 {

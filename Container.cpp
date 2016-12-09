@@ -7,18 +7,26 @@ Container::Container(){open=false;}
 Container::~Container(){}
 
 void Container::printContents() {
-    cout<<this->getName()<<" contains ";
-    for(auto i = this->item.begin(); i != item.end(); ++i)
-    {
-        cout<<(*i);
-        if(i != --item.end())
-        {
-            cout<<", ";
+    bool isempty = true;
+    for (auto i = this->item.begin(); i != item.end(); ++i) {
+        if (string(*i) != string("")) {
+            isempty = false;
         }
     }
-    cout<<endl;
+    if (isempty) {
+        cout << getName() << " is empty." << endl;
+    }
+    else {
+        cout << this->getName() << " contains ";
+        for (auto i = this->item.begin(); i != item.end(); ++i) {
+            cout << (*i);
+            if (i != --item.end()) {
+                cout << ", ";
+            }
+        }
+        cout << endl;
+    }
 }
-
 vector<char*> Container::getItem(){
     return item;
 }
@@ -30,7 +38,7 @@ void Container::removeItem(char* _item){
     {
         if (string(*it) == string(_item))
         {
-            item.erase(it);
+            *it=(char*)"";
         }
     }
 }

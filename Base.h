@@ -17,12 +17,15 @@ private:
     std::string status;
     std::string description;
     Trigger* trigger;
+    bool alive;
 public:
+    void revive();
     void removeTrigger();
     void printDesc();
     std::string getName();
     std::string getStatus();
     std::string getDescription();
+    bool exists();
     Trigger* getTrigger();
     void setName(std::string _name);
     void setStatus(std::string _status);
@@ -31,6 +34,7 @@ public:
     bool checkTrigger(string _command);
     void delTrigger();
     bool hasTrigger();
+    void del();
     Base();
     virtual ~Base();
 };
