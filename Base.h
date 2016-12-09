@@ -28,6 +28,7 @@ public:
     void setStatus(std::string _status);
     void setDescription(std::string _description);
     void setTrigger(xml_node<>* node);
+    bool checkTrigger(string _command);
 
     Base();
     virtual ~Base();

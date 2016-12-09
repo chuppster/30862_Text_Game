@@ -23,6 +23,7 @@ public:
     bool isAccepted(char* _item);
     void addItem(char* _item);
     void addAccept(char* _item);
+    bool contains(char* _item);
 
     Container();
     virtual ~Container();

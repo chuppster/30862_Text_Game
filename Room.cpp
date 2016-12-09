@@ -7,8 +7,7 @@
 Room::Room(){}
 Room::~Room(){}
 
-string Room::getBorderRoom(string dir)
-{
+string Room::getBorderRoom(string dir) {
     for(unsigned int i = 0; i < border.size(); i++)
     {
         if(dir == "n")
@@ -43,7 +42,6 @@ string Room::getBorderRoom(string dir)
 
     return string("");
 }
-
 bool Room::hasItem(string _item) {
     for(unsigned int i = 0;i<item.size();i++)
     {
@@ -52,35 +50,13 @@ bool Room::hasItem(string _item) {
     }
     return false;
 }
-
-void Room::pullTrigger(){
-    getTrigger()->printTrigger();
-    if(string(getTrigger()->type) != ("permanent"))
-    {
-        removeTrigger();
-    }
-}
-
-bool Room::checkTrigger(string _command)
-{
-    if(string(getTrigger()->command) == _command)
-    {
-        return true;
-    }
-    return false;
-}
-
-char* Room::getType()
-{
+char* Room::getType() {
     return type;
 }
-
-vector<Border*> Room::getBorder()
-{
+vector<Border*> Room::getBorder() {
     return border;
 }
-vector<char*> Room::getContainer()
-{
+vector<char*> Room::getContainer() {
     return container;
 }
 vector<char*> Room::getItem(){
@@ -106,7 +82,6 @@ void Room::addItem(char* _item){
 void Room::addCreature(char* _creature){
     creature.push_back(_creature);
 }
-
 void Room::removeContainer(char* _container){
     for (std::vector<char*>::iterator it = container.begin() ; it != container.end(); ++it)
     {
@@ -133,5 +108,19 @@ void Room::removeCreature(char* _creature){
             creature.erase(it);
         }
     }
+}
+bool Room::containsCreature(string _creature) {
+    if(_creature == "")
+    {
+        return false;
+    }
+    for(auto i = creature.begin(); i != creature.end(); ++i)
+    {
+        if(string(*i) == _creature)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 

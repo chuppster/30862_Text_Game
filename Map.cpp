@@ -19,7 +19,7 @@ void Map::printRoomObj() {
 
 void Map::run()
 {
-    vector<string> inventory;
+
     bool exit = false;
     Room* room;
     string in1;
@@ -34,39 +34,29 @@ void Map::run()
     bool triggered = false;
     while(exit == false)//let's loop until we exit
     {
-        while(checkCreatureTriggers()){}
+        while(checkCreatureTriggers(room)){}
         getline(cin, input);
         if(input != string("")) {
             input_vec = split(input, ' ');
             //cout<<input_vec.operator[](0);
             in1 = input_vec.operator[](0);
         }
+        cout<<"ROOM: "<<room->getName()<<" BORDER 1: " << room->getBorder().operator[](0)->name << endl;
 
-        //check if triggers override command
-        while(checkCreatureTriggers()){}
-        //execute command if not overridden
-
-        //check if the effects of command activate trigger
-
-        //if the command activates the trigger, perform the indicated actions
+        while(checkCreatureTriggers(room)){}
+        handleRoomTrig(room, in1);
 
         if(in1 == string("n") || in1 == string("s") || in1 == string("e") || in1 == string("w"))
         {
-            triggered = room->checkTrigger(in1);
-            if(!triggered)
+            border_room = room->getBorderRoom(in1);//gets you the name of the room in that direction
+            if(border_room == string(""))//if you can't find the room
             {
-                cout<<"didn't find a trigger"<<endl;
-                border_room = room->getBorderRoom(in1);//gets you the name of the room in that direction
-                if(border_room == string(""))//if you can't find the room
-                {
-                    cout<<"Can't go that way."<<endl;
-                } else{//if you can, move to the next room
-                    room = getRoom(border_room);
-                    cout << room->getDescription() << endl;
-                }
-            } else{
-                //cout<<"found a trigger"<<endl;
-                room->pullTrigger();
+                cout<<"Can't go that way."<<endl;
+            }
+            else
+            {//if you can, move to the next room
+                room = getRoom(border_room);
+                cout << room->getDescription() << endl;
             }
         }
         else if(in1 == string("i"))
@@ -88,16 +78,12 @@ void Map::run()
             curritem=input_vec.operator[](1);
             for(i=0;i<itemVec.size();i++)
             {
-                //cout<<"iterate for i= "<<i<<endl;
                if(itemVec.operator[](i)->getName() == curritem)
                {
                    if(room->hasItem(curritem)){
-                       //cout<<"Has the Item"<<endl;
                        inventory.push_back(curritem);
-                       //cout<<"Inventory: "<<inventory.operator[](0)<<endl;
-                       //cout<<"Removing Item"<<endl;
                        room->removeItem(curritem);
-                       //cout<<"Removed Item"<<endl;
+                       cout<<"Item "<<curritem<<" added to inventory"<<endl;
                    }
                }
             }
@@ -124,56 +110,173 @@ void Map::run()
                 }
             }
         }
-
-        if(in1 == string("exit"))
+        else if(in1 == string("exit"))
         {exit = true;}
+        else {
+            if (in1 != string("")) {
+            cout << "Error" << endl;
+            }
+        }
     }
 
 
 }
-
-bool Map::checkCreatureTriggers() {
+bool Map::handleRoomTrig(Room* room, string input){
+    bool triggered = false;
+    if(room->checkTrigger(input) == false)//if there isn't a trigger for the given input, return false
+    {
+        return false;
+    }
+    //cout<<"found a trigger"<<endl;
+    //need to check condiditon
+    Condition* cond = room->getTrigger()->condition;
+    if(string(cond->has) == string("no"))
+    {
+        //cout<<"Trigger with a (NO) condition"<<endl;
+        if(string(cond->owner) == string("inventory")) {
+            if (!inventoryContains(string(cond->object)))
+            {
+                triggered = true;
+            }
+        }
+        else
+        {
+            Container* curr = getContainer(cond->owner);
+            if(!curr->contains(cond->object))
+            {
+                triggered = true;
+            }
+        }
+    }
+    else if(string(cond->has) == string("yes"))
+    {
+        if(string(cond->owner) == string("inventory")) {
+            if (inventoryContains(string(cond->object)))
+            {
+                triggered = true;
+            }
+        }
+        else
+        {
+            Container* curr = getContainer(cond->owner);
+            if(curr->contains(cond->object))
+            {
+                triggered = true;
+            }
+        }
+    }
+    else if (string(cond->object) != string(""))
+    {
+        for(unsigned int currobj = 0; currobj < itemVec.size(); currobj++)
+        {
+            if(itemVec.operator[](currobj)->getName() == string(cond->object))
+            {
+                if(itemVec.operator[](currobj)->getStatus() == string(cond->status))
+                {
+                    triggered = true;
+                }
+            }
+        }
+        for(unsigned int currobj = 0; currobj < containVec.size(); currobj++)
+        {
+            if(containVec.operator[](currobj)->getName() == string(cond->object))
+            {
+                if(containVec.operator[](currobj)->getStatus() == string(cond->status))
+                {
+                    triggered = true;
+                }
+            }
+        }
+        for(unsigned int currobj = 0; currobj < creatureVec.size(); currobj++)
+        {
+            if(creatureVec.operator[](currobj)->getName() == string(cond->object))
+            {
+                if(creatureVec.operator[](currobj)->getStatus() == string(cond->status))
+                {
+                    triggered = true;
+                }
+            }
+        }
+    }
+    if(triggered)
+    {
+        pullTrigger(room);
+        return true;
+    }
+    return false;
+}
+Container* Map::getContainer(string _cont) {
+    for(unsigned int i = 0; i < containVec.size(); i++)
+    {
+        if(_cont == string(containVec.operator[](i)->getName()))
+        {
+            return containVec.operator[](i);
+        }
+    }
+    return NULL;
+}
+bool Map::inventoryContains(string _item) {
+    for(auto i = inventory.begin(); i != inventory.end(); ++i)
+    {
+        if(*i == _item)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+void Map::pullTrigger(Base *_item) {
+    if(_item != NULL) {
+        _item->getTrigger()->printTrigger();
+        if (string(_item->getTrigger()->type) != ("permanent")) {
+            _item->removeTrigger();
+        }
+    }
+}
+bool Map::checkCreatureTriggers(Room* _room) {
     Trigger* currtrig;
     Condition* cond;//the current condition
     Item* obj;//the current object
     bool fired = false;
     for(unsigned int i = 0; i<creatureVec.size(); i++) {//for each creature
         //cout<<"Creature Iterator"<<endl;
-        currtrig = creatureVec.operator[](i)->getTrigger();
-        if(currtrig != NULL){//if they have a trigger
-            //cout<<"Trigger Found: "<< currtrig->print<<endl;
-            cond = currtrig->condition;
-            for(unsigned int j = 0; j < itemVec.size(); j++)//check the items to see if it matches with the condition
-            {
-                //cout<<"Look for Match "<<itemVec.size()<<endl;
-                obj = itemVec.operator[](j);
-                if(obj == NULL)
-                {cout<<"NULL POINTER"<<endl;}
-                if(obj->getName() == string(cond->object))//if it does, check the status
+        //if the cureature is in the current room
+        if(_room->containsCreature(string(creatureVec.operator[](i)->getName()))) {
+            currtrig = creatureVec.operator[](i)->getTrigger();
+            if (currtrig != NULL)
+            {//if they have a trigger
+                //cout<<"Trigger Found: "<< currtrig->print<<endl;
+                cond = currtrig->condition;
+                for (unsigned int j = 0;
+                     j < itemVec.size(); j++)//check the items to see if it matches with the condition
                 {
-                    //cout<<"current object has same name as condition"<<endl;
-                    if(obj->getStatus() == string(cond->status))//if the status is right
+                    //cout<<"Look for Match "<<itemVec.size()<<endl;
+                    obj = itemVec.operator[](j);
+                    if (obj == NULL) { cout << "NULL POINTER" << endl; }
+                    if (obj->getName() == string(cond->object))//if it does, check the status
                     {
-                        //cout<<"Status is the same!"<<endl;
-                        cout<<currtrig->print<<endl;
-                        if((currtrig->type) != string("permanent"))
+                        //cout<<"current object has same name as condition"<<endl;
+                        if (obj->getStatus() == string(cond->status))//if the status is right
                         {
-                            cout<<"Try and get rid of trigger"<<endl;
-                            obj->setTrigger(NULL);
-                            cout<<"Removed Trigger"<<endl;
+                            //cout<<"Status is the same!"<<endl;
+                            cout << currtrig->print << endl;
+                            if ((currtrig->type) != string("permanent")) {
+                                //cout<<"Try and get rid of trigger"<<endl;
+                                obj->setTrigger(NULL);
+                                //cout<<"Removed Trigger"<<endl;
+                            }
+                            //cout<<"Made it out"<<endl;
+                            fired = true;
                         }
-                        cout<<"Made it out"<<endl;
-                        fired = true;
                     }
+                    //cout<<"Check Iterator"<<endl;
                 }
-                //cout<<"Check Iterator"<<endl;
-            }
 
+            }
         }
     }
     return fired;
 }
-
 void Map::updateItem(string _item, string _status) {
     for(unsigned int i = 0; i<itemVec.size(); i++)
     {
@@ -182,7 +285,6 @@ void Map::updateItem(string _item, string _status) {
         }
     }
 }
-
 void Map::turnOnItem(string _name) {
     string action;
     vector<string> actions;
@@ -209,7 +311,6 @@ void Map::turnOnItem(string _name) {
     }
 
 }
-
 void Map::readItem(string _name) {
     for(unsigned int i = 0; i<itemVec.size(); i++)
     {
@@ -227,7 +328,6 @@ void Map::readItem(string _name) {
 
     }
 }
-
 void Map::build_map(xml_node<>* firstnode) {
     xml_node<> *currnode = firstnode;
 
@@ -259,7 +359,6 @@ void Map::build_map(xml_node<>* firstnode) {
 
     }
 }
-
 void Map::node2obj() {
     unsigned int i = 0;
     xml_node<>* currnode;
@@ -415,7 +514,6 @@ void Map::node2obj() {
 
 
 }
-
 Room* Map::getRoom(string name) {
     for(unsigned int i = 0; i < roomVec.size(); i++)
     {
@@ -425,7 +523,6 @@ Room* Map::getRoom(string name) {
         }
     }
 }
-
 vector<string> Map::split(string &s, char delim) {
     vector<string> elems;
     stringstream stream(s);

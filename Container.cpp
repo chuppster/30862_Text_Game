@@ -36,10 +36,19 @@ bool Container::isAccepted(char* _item){
     }
     return false;
 }
-
 void Container::addItem(char* _item){
     item.push_back(_item);
 }
 void Container::addAccept(char* _item){
     accept.push_back(_item);
+}
+bool Container::contains(char *_item) {
+    for(auto i = item.begin(); i != item.end(); i++)
+    {
+        if(string(*i) == string(_item))
+        {
+            return true;
+        }
+    }
+    return false;
 }

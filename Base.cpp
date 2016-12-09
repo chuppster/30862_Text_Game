@@ -38,7 +38,22 @@ void Base::setDescription(std::string _description){
     description = _description;
 }
 void Base::setTrigger(xml_node<>* node){
-    trigger = new Trigger;
-    trigger->setup(node);
+    if(node == NULL)
+    {
+        trigger = NULL;
+    }
+    else {
+        trigger = new Trigger;
+        trigger->setup(node);
+    }
+}
+bool Base::checkTrigger(string _command) {
+    if(trigger == NULL)
+    { return false;}
+    if(string(trigger->command) == _command)
+    {
+        return true;
+    }
+    return false;
 }
 

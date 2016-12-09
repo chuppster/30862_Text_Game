@@ -23,6 +23,7 @@ private:
     vector<xml_node<>*> containers;
     vector<xml_node<>*> creatures;
 public:
+    vector<string> inventory;
     Room* getRoom(string name);
     vector<Room*> roomVec;
     vector<Item*> itemVec;
@@ -38,7 +39,11 @@ public:
     void readItem(string _name);
     void turnOnItem(string _name);
     void updateItem(string _item, string _status);
-    bool checkCreatureTriggers();
+    bool checkCreatureTriggers(Room* _room);
+    void pullTrigger(Base* _item);
+    bool inventoryContains(string _item);
+    Container* getContainer(string _cont);
+    bool handleRoomTrig(Room* room, string input);
 };
 
 
