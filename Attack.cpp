@@ -19,45 +19,34 @@ void Attack::setup(xml_node<>* node) {
         }
         else if(string(currnode->name()) == string("condition"))
         {
-            cout<<"Setup Condition"<<endl;
-
-            cout<<"Made new Condition"<<endl;
+            condition = new Condition;
             xml_node<>* subnode = currnode->first_node();
             while(true)
             {
-                cout<<"Enter While for Condition"<<endl;
                 if(string(subnode->name())== string("has"))
                 {
-                    cout<<"Has"<<endl;
-                    condition.has = subnode->value();
+                    condition->has = subnode->value();
                 }
-                else if(string(subnode->name())== string("object"))
+                if(string(subnode->name())== string("object"))
                 {
-                    cout<<"Object"<<endl;
-                    condition.object = subnode->value();
+                    condition->object = subnode->value();
                 }
-                else if(string(subnode->name())== string("owner"))
+                if(string(subnode->name())== string("owner"))
                 {
-                    cout<<"Owner"<<endl;
-                    condition.owner = subnode->value();
+                    condition->owner = subnode->value();
                 }
-                else if(string(subnode->name())== string("status"))
+                if(string(subnode->name())== string("status"))
                 {
-                    cout<<"status"<<endl;
-                    condition.status = subnode->value();
+                    condition->status = subnode->value();
                 }
-                cout<<"Check Condition for NULL"<<endl;
                 if(subnode->next_sibling() == NULL)
                 {break;}
                 subnode = subnode->next_sibling();
             }
-
         }
-        cout<<"check for null"<<endl;
         if(currnode->next_sibling() == NULL)
         {break;}
         currnode = currnode->next_sibling();
     }
     //cout << currnode->name() << currnode->value() <<endl;
-    cout<<"Finish setting up attack"<<endl;
 }

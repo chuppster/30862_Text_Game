@@ -21,6 +21,8 @@ string
 -
 vector
 -
+iostream
+-
 
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.cpp
 Base.h
@@ -51,6 +53,12 @@ Condition.h
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h
 
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h
+string
+-
+rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+iostream
+-
 
 C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.cpp
 Container.h

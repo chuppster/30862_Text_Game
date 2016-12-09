@@ -18,6 +18,7 @@ CMakeFiles/30862_Text_Game.dir/Border.cpp.obj: ../rapidxml.hpp
 
 CMakeFiles/30862_Text_Game.dir/Condition.cpp.obj: ../Condition.cpp
 CMakeFiles/30862_Text_Game.dir/Condition.cpp.obj: ../Condition.h
+CMakeFiles/30862_Text_Game.dir/Condition.cpp.obj: ../rapidxml.hpp
 
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Base.h
 CMakeFiles/30862_Text_Game.dir/Container.cpp.obj: ../Condition.h

@@ -42,7 +42,7 @@ void Container::addItem(char* _item){
 void Container::addAccept(char* _item){
     accept.push_back(_item);
 }
-bool Container::contains(char *_item) {
+bool Container::contains(string _item) {
     for(auto i = item.begin(); i != item.end(); i++)
     {
         if(string(*i) == string(_item))

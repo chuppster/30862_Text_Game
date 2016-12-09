@@ -10,13 +10,14 @@
 #include "rapidxml.hpp"
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 using namespace rapidxml;
 
 class Attack {
 public:
-    Condition condition;
+    Condition* condition;
     string print;
     vector<string> action;
 

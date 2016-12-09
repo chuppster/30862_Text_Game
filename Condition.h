@@ -4,7 +4,12 @@
 
 #ifndef INC_30862_TEXT_GAME_CONDITION_H
 #define INC_30862_TEXT_GAME_CONDITION_H
+#include<string>
+#include "rapidxml.hpp"
+#include <iostream>
 
+using namespace std;
+using namespace rapidxml;
 
 class Condition {
 public:
@@ -14,7 +19,10 @@ public:
     char* status;
     Condition();
     virtual ~Condition();
+
+    void setup(xml_node<>* node);
 };
+
 
 
 #endif //INC_30862_TEXT_GAME_CONDITION_H

@@ -146,7 +146,7 @@ void Map::run()
                 if(successfulAttack)
                 {
                     currAttack=victim->getAttack();
-                    if(string(getItem(string(currAttack->condition.object))->getStatus()) == currAttack->condition.status)
+                    if(string(getItem(string(currAttack->condition->object))->getStatus()) == currAttack->condition->status)
                     {
                         cout<<currAttack->print<<endl;
                         for(unsigned int u = 0; u < currAttack->action.size(); u++)
