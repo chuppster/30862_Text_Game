@@ -1,7 +1,10 @@
 //
 // Created by Adrian on 12/5/2016.
 //
-
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
 #include <cstring>
 #include <time.h>
 #include <stdlib.h>
@@ -90,17 +93,20 @@ void Map::run()
         }
         else if(in1 == string("take"))//take command
         {
+            bool roomhas = false;
+            bool containhas = false;
             curritem=input_vec.operator[](1);
             for(i=0;i<itemVec.size();i++)
             {
-               if(itemVec.operator[](i)->getName() == curritem)
-               {
-                   if(room->hasItem(curritem)){
-                       inventory.push_back(curritem);
-                       room->removeItem(curritem);
-                       cout<<"Item "<<curritem<<" added to inventory"<<endl;
-                   }
-               }
+                if(itemVec.operator[](i)->getName() == curritem)
+                {
+                    if(room->hasItem(curritem)){
+                        inventory.push_back(curritem);
+                        room->removeItem(curritem);
+                        cout<<"Item "<<curritem<<" added to inventory"<<endl;
+                        roomhas = true;
+                    }
+                }
             }
             for(auto i = containVec.begin(); i != containVec.end(); ++i)
             {
@@ -111,8 +117,13 @@ void Map::run()
                         inventory.push_back(contItem->getName());
                         (*i)->removeItem((char *)(contItem->getName().c_str()));
                         cout << "Item " << contItem->getName() << " added to inventory" << endl;
+                        containhas = true;
                     }
                 }
+            }
+            if(!roomhas && !containhas)
+            {
+                cout<<"Error"<<endl;
             }
         }
         else if(in1 == string("read"))//read command
@@ -206,6 +217,23 @@ void Map::run()
                 currCont->open=true;
             }
         }
+        else if(in1 == string("drop"))
+        {
+            if(input_vec.size()!= 2)
+            {
+                cout<<"Error"<<endl;
+            }
+            if(inventoryContains(input_vec[1]))
+            {
+                room->addItem((char*)input_vec[1].c_str());
+                removeFromInv(input_vec[1]);
+                cout<<input_vec[1]<<" dropped."<<endl;
+            }
+            else
+            {
+                cout<<"Error"<<endl;
+            }
+        }
         else if(in1 == string("exit"))
         {
             exit = true;
@@ -220,6 +248,13 @@ void Map::run()
     }
 
 
+}
+void Map::removeFromInv(string _item) {
+    vector<string>::iterator toDel = find(inventory.begin(), inventory.end(), _item);
+    if(toDel != inventory.end())
+    {
+        inventory.erase(toDel);
+    }
 }
 void Map::del(string _obj) {
 
@@ -419,14 +454,15 @@ Item* Map::getItemCont(string _item, string _cont) {
     return NULL;
 }
 bool Map::inventoryContains(string _item) {
-    for(auto i = inventory.begin(); i != inventory.end(); ++i)
+    vector<string>::iterator i = find(inventory.begin(), inventory.end(), _item);
+    if(i == inventory.end())
     {
-        if(*i == _item)
-        {
-            return true;
-        }
+        return false;
     }
-    return false;
+    else
+    {
+        return true;
+    }
 }
 void Map::pullTrigger(Base *_item) {
     if(_item != NULL) {

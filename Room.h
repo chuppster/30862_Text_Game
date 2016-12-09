@@ -12,6 +12,10 @@
 #include "Item.h"
 #include "Container.h"
 #include "Border.h"
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
 
 using namespace std;
 

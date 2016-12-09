@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Attack.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.cpp
 iostream
 -
 Attack.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Attack.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Attack.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h
 Condition.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Condition.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 string
 -
 vector
@@ -24,11 +24,11 @@ vector
 iostream
 -
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.cpp
 Base.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
 iostream
 -
 string
@@ -36,49 +36,49 @@ string
 vector
 -
 Trigger.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Trigger.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Trigger.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Border.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Border.cpp
 Border.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Border.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Border.h
 string
 -
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Border.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Border.h
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Condition.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.cpp
 Condition.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Condition.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Condition.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h
 string
 -
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 iostream
 -
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Container.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.cpp
 Container.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Container.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Container.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.h
 iostream
 -
 string
 -
 Base.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
 Item.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Creature.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Creature.cpp
 Creature.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Creature.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Creature.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Creature.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Creature.h
 iostream
 -
 string
@@ -86,23 +86,31 @@ string
 vector
 -
 Base.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
 Attack.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Attack.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.cpp
 Item.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.h
 iostream
 -
 Base.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
 Turnon.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Turnon.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Turnon.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Map.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.cpp
+iostream
+-
+algorithm
+-
+vector
+-
+string
+-
 cstring
 -
 time.h
@@ -110,67 +118,75 @@ time.h
 stdlib.h
 -
 Map.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Map.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Map.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.h
 iostream
 -
 string
 -
 Room.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Room.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Room.h
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 sstream
 -
 vector
 -
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Room.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Room.cpp
 Room.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Room.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Room.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Room.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Room.h
 iostream
 -
 string
 -
 Base.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
 Creature.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Creature.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Creature.h
 Item.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.h
 Container.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Container.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.h
 Border.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Border.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Border.h
+iostream
+-
+algorithm
+-
+vector
+-
+string
+-
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Trigger.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Trigger.cpp
 Trigger.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Trigger.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Trigger.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Trigger.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Trigger.h
 iostream
 -
 string
 -
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 Condition.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Condition.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Turnon.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Turnon.cpp
 string
 -
 Turnon.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Turnon.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Turnon.h
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Turnon.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Turnon.h
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/main.cpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/main.cpp
 iostream
 -
 fstream
@@ -178,27 +194,27 @@ fstream
 cstring
 -
 Base.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h
 Room.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Room.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Room.h
 Item.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.h
 Container.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Container.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.h
 Creature.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Creature.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Creature.h
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 rapidxml_utils.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml_utils.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml_utils.hpp
 Map.h
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Map.h
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.h
 iostream
 -
 string
 -
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 cstdlib
 -
 cassert
@@ -208,9 +224,9 @@ new
 exception
 -
 
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml_utils.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml_utils.hpp
 rapidxml.hpp
-C:/Users/Adrian/Documents/GitHub/30862_Text_Game/rapidxml.hpp
+C:/Users/adria_000/Documents/GitHub/30862_Text_Game/rapidxml.hpp
 vector
 -
 string

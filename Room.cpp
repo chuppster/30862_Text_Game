@@ -92,12 +92,10 @@ void Room::removeContainer(char* _container){
     }
 }
 void Room::removeItem(string _item){
-    for (unsigned int i = 0; i < item.size();i++)
+    vector<char*>::iterator i = find(item.begin(), item.end(), (char*)_item.c_str());
+    if(i != item.end())
     {
-        if (string(item.operator[](i)) == _item)
-        {
-            item.operator[](i)=NULL;
-        }
+        item.erase(i);
     }
 }
 void Room::removeCreature(char* _creature){

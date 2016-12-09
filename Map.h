@@ -50,6 +50,7 @@ public:
     bool handleRoomTrig(Room* room, string input);
     void add(Item* _obj, Container* _cont);
     void del(string _obj);
+    void removeFromInv(string _item);
 };
 
 

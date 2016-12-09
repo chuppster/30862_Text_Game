@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
+				<Option working_dir="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="30862_Text_Game">
-				<Option output="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/30862_Text_Game.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
+				<Option output="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/30862_Text_Game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 30862_Text_Game"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 30862_Text_Game"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="30862_Text_Game/fast">
-				<Option output="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/30862_Text_Game.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
+				<Option output="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/30862_Text_Game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,103 +53,103 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 30862_Text_Game/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 30862_Text_Game/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
+				<Option working_dir="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
+				<Option working_dir="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Adrian/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/adria_000/Documents/GitHub/30862_Text_Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Attack.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Attack.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Attack.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Base.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Base.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Border.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Border.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Border.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Border.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Condition.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Condition.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Condition.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Container.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Container.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Container.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Creature.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Creature.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Creature.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Creature.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Item.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Item.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Map.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Map.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Map.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Room.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Room.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Room.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Room.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Trigger.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Trigger.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Trigger.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Trigger.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Turnon.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Turnon.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/Turnon.h">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/Turnon.h">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/main.cpp">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/main.cpp">
 			<Option target="30862_Text_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Adrian/Documents/GitHub/30862_Text_Game/CMakeLists.txt">
+		<Unit filename="C:/Users/adria_000/Documents/GitHub/30862_Text_Game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

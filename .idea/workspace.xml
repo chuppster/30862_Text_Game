@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Map.cpp" line="95" />
-  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
     <generated>
       <config projectName="30862_Text_Game" targetName="30862_Text_Game" />
@@ -16,12 +13,37 @@
   <component name="ChangeListManager">
     <list default="true" id="107d3023-20d6-482f-9925-e4660db21024" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_C.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_CXX.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdC/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdC/a.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdCXX/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdCXX/a.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Base.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Base.cpp.obj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Container.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Container.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Item.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Item.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Room.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Room.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/main.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/main.cpp.obj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/objects.a" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/objects.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base.cpp" afterPath="$PROJECT_DIR$/Base.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base.h" afterPath="$PROJECT_DIR$/Base.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Container.cpp" afterPath="$PROJECT_DIR$/Container.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Map.cpp" afterPath="$PROJECT_DIR$/Map.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Map.h" afterPath="$PROJECT_DIR$/Map.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Room.cpp" afterPath="$PROJECT_DIR$/Room.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Room.h" afterPath="$PROJECT_DIR$/Room.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
     </list>
     <ignored path="30862_Text_Game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,29 +68,30 @@
           <file leaf-file-name="Map.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Map.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="139">
-                  <caret line="177" column="25" lean-forward="false" selection-start-line="177" selection-start-column="25" selection-end-line="177" selection-end-column="25" />
+                <state relative-caret-position="319">
+                  <caret line="106" column="39" lean-forward="false" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
                   <folding>
-                    <element signature="e#42#60#0" expanded="true" />
-                    <element signature="e#145#361#0" expanded="false" />
-                    <element signature="e#7218#8026#0" expanded="false" />
-                    <element signature="e#8027#8187#0" expanded="false" />
-                    <element signature="e#8188#8411#0" expanded="false" />
-                    <element signature="e#8412#10949#0" expanded="false" />
-                    <element signature="e#10950#11211#0" expanded="false" />
-                    <element signature="e#11212#11482#0" expanded="false" />
-                    <element signature="e#11483#11980#0" expanded="false" />
-                    <element signature="e#11981#12805#0" expanded="false" />
-                    <element signature="e#12806#13013#0" expanded="false" />
-                    <element signature="e#13014#13239#0" expanded="false" />
-                    <element signature="e#13240#14892#0" expanded="false" />
-                    <element signature="e#14893#15131#0" expanded="false" />
-                    <element signature="e#15132#15843#0" expanded="false" />
-                    <element signature="e#15844#16263#0" expanded="false" />
-                    <element signature="e#16264#17074#0" expanded="false" />
-                    <element signature="e#17075#22312#0" expanded="false" />
-                    <element signature="e#22313#22537#0" expanded="false" />
-                    <element signature="e#22538#22762#0" expanded="false" />
+                    <element signature="e#41#60#0" expanded="true" />
+                    <element signature="e#221#437#0" expanded="false" />
+                    <element signature="e#8040#8244#0" expanded="false" />
+                    <element signature="e#8245#9053#0" expanded="false" />
+                    <element signature="e#9054#9214#0" expanded="false" />
+                    <element signature="e#9215#9438#0" expanded="false" />
+                    <element signature="e#9439#11976#0" expanded="false" />
+                    <element signature="e#11977#12238#0" expanded="false" />
+                    <element signature="e#12239#12509#0" expanded="false" />
+                    <element signature="e#12510#13007#0" expanded="false" />
+                    <element signature="e#13008#13832#0" expanded="false" />
+                    <element signature="e#13833#14065#0" expanded="false" />
+                    <element signature="e#14066#14291#0" expanded="false" />
+                    <element signature="e#14292#15944#0" expanded="false" />
+                    <element signature="e#15945#16183#0" expanded="false" />
+                    <element signature="e#16184#16895#0" expanded="false" />
+                    <element signature="e#16896#17315#0" expanded="false" />
+                    <element signature="e#17316#18126#0" expanded="false" />
+                    <element signature="e#18127#23364#0" expanded="false" />
+                    <element signature="e#23365#23589#0" expanded="false" />
+                    <element signature="e#23590#23814#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -87,7 +110,7 @@
           <file leaf-file-name="Creature.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Creature.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="748">
+                <state relative-caret-position="560">
                   <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
                   <folding />
                 </state>
@@ -97,8 +120,8 @@
           <file leaf-file-name="Room.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Room.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+                <state relative-caret-position="459">
+                  <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
                   <folding>
                     <element signature="e#97#1045#0" expanded="false" />
                     <element signature="e#1046#1229#0" expanded="false" />
@@ -113,9 +136,8 @@
                     <element signature="e#1774#1835#0" expanded="false" />
                     <element signature="e#1836#1913#0" expanded="false" />
                     <element signature="e#1914#2165#0" expanded="false" />
-                    <element signature="e#2166#2372#0" expanded="false" />
-                    <element signature="e#2373#2618#0" expanded="false" />
-                    <element signature="e#2619#2898#0" expanded="false" />
+                    <element signature="e#2350#2595#0" expanded="false" />
+                    <element signature="e#2596#2875#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -124,7 +146,7 @@
           <file leaf-file-name="Trigger.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Trigger.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="814">
+                <state relative-caret-position="629">
                   <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
                   <folding />
                 </state>
@@ -134,7 +156,7 @@
           <file leaf-file-name="Container.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Container.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
+                <state relative-caret-position="306">
                   <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
                   <folding>
                     <element signature="e#687#741#0" expanded="false" />
@@ -153,7 +175,7 @@
           <file leaf-file-name="Base.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Base.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
+                <state relative-caret-position="187">
                   <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
                   <folding />
                 </state>
@@ -163,7 +185,7 @@
           <file leaf-file-name="Turnon.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Turnon.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
+                <state relative-caret-position="204">
                   <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
                   <folding>
                     <element signature="e#45#62#0" expanded="true" />
@@ -175,7 +197,7 @@
           <file leaf-file-name="Attack.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Attack.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="968">
+                <state relative-caret-position="748">
                   <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
                   <folding>
                     <element signature="e#45#64#0" expanded="true" />
@@ -188,11 +210,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Map.h" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Map.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Map.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="703">
-                  <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+                <state relative-caret-position="656">
+                  <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
                   <folding>
                     <element signature="e#111#130#0" expanded="true" />
                   </folding>
@@ -203,8 +225,8 @@
           <file leaf-file-name="Room.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Room.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+                <state relative-caret-position="27">
+                  <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
                   <folding>
                     <element signature="e#117#136#0" expanded="true" />
                   </folding>
@@ -215,7 +237,7 @@
           <file leaf-file-name="Creature.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Creature.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
+                <state relative-caret-position="425">
                   <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding>
                     <element signature="e#124#143#0" expanded="true" />
@@ -227,7 +249,7 @@
           <file leaf-file-name="Attack.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Attack.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
+                <state relative-caret-position="255">
                   <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
                   <folding>
                     <element signature="e#121#143#0" expanded="true" />
@@ -239,7 +261,7 @@
           <file leaf-file-name="Condition.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Condition.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
+                <state relative-caret-position="425">
                   <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding>
                     <element signature="e#125#141#0" expanded="true" />
@@ -251,7 +273,7 @@
           <file leaf-file-name="Trigger.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Trigger.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
+                <state relative-caret-position="102">
                   <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
                   <folding>
                     <element signature="e#118#137#0" expanded="true" />
@@ -260,10 +282,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Base.h" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Base.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Base.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
+                <state relative-caret-position="255">
                   <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
                   <folding>
                     <element signature="e#116#135#0" expanded="true" />
@@ -275,7 +297,7 @@
           <file leaf-file-name="Item.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Item.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
+                <state relative-caret-position="340">
                   <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
                   <folding>
                     <element signature="e#116#135#0" expanded="true" />
@@ -287,7 +309,7 @@
           <file leaf-file-name="Container.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Container.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
+                <state relative-caret-position="459">
                   <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
                   <folding />
                 </state>
@@ -326,8 +348,6 @@
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Turnon.cpp" />
         <option value="$PROJECT_DIR$/Item.cpp" />
-        <option value="$PROJECT_DIR$/Room.h" />
-        <option value="$PROJECT_DIR$/Room.cpp" />
         <option value="$PROJECT_DIR$/Trigger.h" />
         <option value="$PROJECT_DIR$/Creature.h" />
         <option value="$PROJECT_DIR$/Condition.h" />
@@ -336,11 +356,13 @@
         <option value="$PROJECT_DIR$/Attack.h" />
         <option value="$PROJECT_DIR$/Attack.cpp" />
         <option value="$PROJECT_DIR$/Creature.cpp" />
-        <option value="$PROJECT_DIR$/Map.h" />
         <option value="$PROJECT_DIR$/Container.h" />
         <option value="$PROJECT_DIR$/Container.cpp" />
         <option value="$PROJECT_DIR$/Base.cpp" />
         <option value="$PROJECT_DIR$/Base.h" />
+        <option value="$PROJECT_DIR$/Map.h" />
+        <option value="$PROJECT_DIR$/Room.h" />
+        <option value="$PROJECT_DIR$/Room.cpp" />
         <option value="$PROJECT_DIR$/Map.cpp" />
       </list>
     </option>
@@ -353,10 +375,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1060" />
+    <option name="x" value="-7" />
+    <option name="y" value="2" />
+    <option name="width" value="1932" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -660,24 +682,25 @@
       <workItem from="1481296472726" duration="352000" />
       <workItem from="1481300999752" duration="2859000" />
       <workItem from="1481307846424" duration="3122000" />
+      <workItem from="1481314680993" duration="3191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103260000" />
+    <option name="totallyTimeSpent" value="106451000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="2" width="1932" height="1055" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13885956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31419286" sideWeight="0.49791232" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31344903" sideWeight="0.49791232" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33015874" sideWeight="0.50417536" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3253796" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -936,31 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Room.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding>
-            <element signature="e#97#1045#0" expanded="false" />
-            <element signature="e#1046#1229#0" expanded="false" />
-            <element signature="e#1230#1272#0" expanded="false" />
-            <element signature="e#1273#1329#0" expanded="false" />
-            <element signature="e#1330#1390#0" expanded="false" />
-            <element signature="e#1391#1440#0" expanded="false" />
-            <element signature="e#1441#1498#0" expanded="false" />
-            <element signature="e#1499#1551#0" expanded="false" />
-            <element signature="e#1552#1691#0" expanded="false" />
-            <element signature="e#1692#1773#0" expanded="false" />
-            <element signature="e#1774#1835#0" expanded="false" />
-            <element signature="e#1836#1913#0" expanded="false" />
-            <element signature="e#1914#2165#0" expanded="false" />
-            <element signature="e#2166#2372#0" expanded="false" />
-            <element signature="e#2373#2618#0" expanded="false" />
-            <element signature="e#2619#2898#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -973,19 +971,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Room.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="e#117#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Item.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="340">
           <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="e#116#135#0" expanded="true" />
@@ -995,7 +983,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Turnon.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="204">
           <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
             <element signature="e#45#62#0" expanded="true" />
@@ -1005,7 +993,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Condition.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
+        <state relative-caret-position="425">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#125#141#0" expanded="true" />
@@ -1015,7 +1003,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Trigger.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#118#137#0" expanded="true" />
@@ -1025,7 +1013,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Attack.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="255">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="e#121#143#0" expanded="true" />
@@ -1035,7 +1023,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Attack.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
+        <state relative-caret-position="748">
           <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
           <folding>
             <element signature="e#45#64#0" expanded="true" />
@@ -1045,23 +1033,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Trigger.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
+        <state relative-caret-position="629">
           <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Creature.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Creature.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
+        <state relative-caret-position="425">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#124#143#0" expanded="true" />
@@ -1069,19 +1049,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Map.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding>
-            <element signature="e#111#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Container.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="306">
           <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
             <element signature="e#687#741#0" expanded="false" />
@@ -1096,6 +1066,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Container.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#116#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Creature.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Room.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#117#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Room.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding>
+            <element signature="e#97#1045#0" expanded="false" />
+            <element signature="e#1046#1229#0" expanded="false" />
+            <element signature="e#1230#1272#0" expanded="false" />
+            <element signature="e#1273#1329#0" expanded="false" />
+            <element signature="e#1330#1390#0" expanded="false" />
+            <element signature="e#1391#1440#0" expanded="false" />
+            <element signature="e#1441#1498#0" expanded="false" />
+            <element signature="e#1499#1551#0" expanded="false" />
+            <element signature="e#1552#1691#0" expanded="false" />
+            <element signature="e#1692#1773#0" expanded="false" />
+            <element signature="e#1774#1835#0" expanded="false" />
+            <element signature="e#1836#1913#0" expanded="false" />
+            <element signature="e#1914#2165#0" expanded="false" />
+            <element signature="e#2350#2595#0" expanded="false" />
+            <element signature="e#2596#2875#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Condition.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
@@ -1104,57 +1142,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Container.h">
+    <entry file="file://$PROJECT_DIR$/Map.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="656">
+          <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
           <folding>
-            <element signature="e#116#135#0" expanded="true" />
+            <element signature="e#111#130#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Map.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="177" column="25" lean-forward="false" selection-start-line="177" selection-start-column="25" selection-end-line="177" selection-end-column="25" />
+        <state relative-caret-position="319">
+          <caret line="106" column="39" lean-forward="false" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
           <folding>
-            <element signature="e#42#60#0" expanded="true" />
-            <element signature="e#145#361#0" expanded="false" />
-            <element signature="e#7218#8026#0" expanded="false" />
-            <element signature="e#8027#8187#0" expanded="false" />
-            <element signature="e#8188#8411#0" expanded="false" />
-            <element signature="e#8412#10949#0" expanded="false" />
-            <element signature="e#10950#11211#0" expanded="false" />
-            <element signature="e#11212#11482#0" expanded="false" />
-            <element signature="e#11483#11980#0" expanded="false" />
-            <element signature="e#11981#12805#0" expanded="false" />
-            <element signature="e#12806#13013#0" expanded="false" />
-            <element signature="e#13014#13239#0" expanded="false" />
-            <element signature="e#13240#14892#0" expanded="false" />
-            <element signature="e#14893#15131#0" expanded="false" />
-            <element signature="e#15132#15843#0" expanded="false" />
-            <element signature="e#15844#16263#0" expanded="false" />
-            <element signature="e#16264#17074#0" expanded="false" />
-            <element signature="e#17075#22312#0" expanded="false" />
-            <element signature="e#22313#22537#0" expanded="false" />
-            <element signature="e#22538#22762#0" expanded="false" />
+            <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#221#437#0" expanded="false" />
+            <element signature="e#8040#8244#0" expanded="false" />
+            <element signature="e#8245#9053#0" expanded="false" />
+            <element signature="e#9054#9214#0" expanded="false" />
+            <element signature="e#9215#9438#0" expanded="false" />
+            <element signature="e#9439#11976#0" expanded="false" />
+            <element signature="e#11977#12238#0" expanded="false" />
+            <element signature="e#12239#12509#0" expanded="false" />
+            <element signature="e#12510#13007#0" expanded="false" />
+            <element signature="e#13008#13832#0" expanded="false" />
+            <element signature="e#13833#14065#0" expanded="false" />
+            <element signature="e#14066#14291#0" expanded="false" />
+            <element signature="e#14292#15944#0" expanded="false" />
+            <element signature="e#15945#16183#0" expanded="false" />
+            <element signature="e#16184#16895#0" expanded="false" />
+            <element signature="e#16896#17315#0" expanded="false" />
+            <element signature="e#17316#18126#0" expanded="false" />
+            <element signature="e#18127#23364#0" expanded="false" />
+            <element signature="e#23365#23589#0" expanded="false" />
+            <element signature="e#23590#23814#0" expanded="false" />
           </folding>
         </state>
       </provider>
