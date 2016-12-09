@@ -78,13 +78,20 @@ void Map::run()
             else
             {
                 for(auto i = inventory.begin(); i != inventory.end(); ++i)
-                {cout << *i << ", ";}
+                {
+                    cout << *i;
+                    if(i != --inventory.end())
+                    {
+                        cout<<", ";
+                    }
+                }
                 cout<<endl;
             }
         }
         else if(in1 == string("take"))//take command
         {
             curritem=input_vec.operator[](1);
+            cout<<"Check Room"<<endl;
             for(i=0;i<itemVec.size();i++)
             {
                if(itemVec.operator[](i)->getName() == curritem)
@@ -96,16 +103,29 @@ void Map::run()
                    }
                }
             }
+            cout<<"Check Containers"<<endl;
+            for(auto i = containVec.begin(); i != containVec.end(); ++i)
+            {
+                Item* contItem = getItemCont(curritem, (*i)->getName());
+                if(contItem != NULL)
+                {
+                    inventory.push_back(contItem->getName());
+                    (*i)->removeItem((char*)(contItem->getName().c_str()));
+                    cout<<"Item "<<contItem->getName()<<" added to inventory"<<endl;
+                }
+            }
         }
         else if(in1 == string("read"))//read command
         {
             curritem=input_vec.operator[](1);
-            for(auto a = inventory.begin(); a != inventory.end(); ++a)
-            {
-                if(*a == curritem)
-                {
-                    readItem(curritem);
+            if(inventoryContains(curritem)) {
+                for (auto a = inventory.begin(); a != inventory.end(); ++a) {
+                    if (*a == curritem) {
+                        readItem(input_vec[1]);
+                    }
                 }
+            } else{
+                cout<<"Error"<<endl;
             }
         }
         else if(in1 == string("turn"))//read command
@@ -135,12 +155,16 @@ void Map::run()
             {
                 cout<<"Error"<<endl;
             }
+            else if(!inventoryContains(input_vec.operator[](3)))
+            {
+                cout<<"Error"<<endl;
+            }
+            else if(getCreature(input_vec[1]) == NULL)
+            {
+                cout<<"Error"<<endl;
+            }
             else
             {
-                if(!inventoryContains(input_vec.operator[](3)))//if you don't have the item....
-                {
-                    cout<<"Error"<<endl;
-                }
                 victim = getCreature(input_vec.operator[](1));//get the victim
                 successfulAttack = victim->checkVulner(input_vec.operator[](3));
                 if(successfulAttack)
@@ -173,6 +197,17 @@ void Map::run()
 
             }
 
+        }
+        else if (in1 == string("open"))
+        {
+            currCont = getContainer(input_vec[1]);
+            if(currCont == NULL)
+            {
+                cout<<"Error"<<endl;
+            } else{
+                currCont->printContents();
+                currCont->open=true;
+            }
         }
         else if(in1 == string("exit"))
         {
@@ -365,7 +400,7 @@ Item* Map::getItemCont(string _item, string _cont) {
     Container* curr;
     for(unsigned int i = 0; i < containVec.size(); i++)//find the contianer
     {
-        if(_cont == containVec.operator[](i)->getName())
+        if(_cont == containVec[i]->getName())
         {
             curr = containVec.operator[](i);
             for(unsigned int j = 0; j < curr->getItem().size(); j++)

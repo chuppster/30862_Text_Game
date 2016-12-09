@@ -3,8 +3,21 @@
 //
 #include "Container.h"
 
-Container::Container(){}
+Container::Container(){open=false;}
 Container::~Container(){}
+
+void Container::printContents() {
+    cout<<this->getName()<<" contains ";
+    for(auto i = this->item.begin(); i != item.end(); ++i)
+    {
+        cout<<(*i);
+        if(i != --item.end())
+        {
+            cout<<", ";
+        }
+    }
+    cout<<endl;
+}
 
 vector<char*> Container::getItem(){
     return item;

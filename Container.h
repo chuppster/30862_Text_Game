@@ -16,6 +16,7 @@ private:
     vector<char*> item;
     vector<char*> accept;
 public:
+    bool open;
     vector<char*> getItem();
     vector<char*> getAccept();
     void removeItem(char* _item);
@@ -24,7 +25,7 @@ public:
     void addItem(char* _item);
     void addAccept(char* _item);
     bool contains(string _item);
-
+    void printContents();
     Container();
     virtual ~Container();
 
