@@ -12,28 +12,28 @@ string Room::getBorderRoom(string dir) {
     {
         if(dir == "n")
         {
-            if(border.operator[](i)->direction == "north")
+            if(string(border.operator[](i)->direction) == string("north"))
             {
                 return string(border.operator[](i)->name);
             }
         }
         if(dir == "s")
         {
-            if(border.operator[](i)->direction == "south")
+            if(string(border.operator[](i)->direction) == string("south"))
             {
                 return string(border.operator[](i)->name);
             }
         }
         if(dir == "e")
         {
-            if(border.operator[](i)->direction == "east")
+            if(string(border.operator[](i)->direction) == string("east"))
             {
                 return string(border.operator[](i)->name);
             }
         }
         if(dir == "w")
         {
-            if(border.operator[](i)->direction == "west")
+            if(string(border.operator[](i)->direction) == string("west"))
             {
                 return string(border.operator[](i)->name);
             }

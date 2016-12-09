@@ -34,29 +34,31 @@ void Map::run()
     bool triggered = false;
     while(exit == false)//let's loop until we exit
     {
-        while(checkCreatureTriggers(room)){}
         getline(cin, input);
         if(input != string("")) {
             input_vec = split(input, ' ');
             //cout<<input_vec.operator[](0);
             in1 = input_vec.operator[](0);
         }
-        cout<<"ROOM: "<<room->getName()<<" BORDER 1: " << room->getBorder().operator[](0)->name << endl;
+        //cout<<"ROOM: "<<room->getName()<<" BORDER 1: " << room->getBorder().operator[](0)->name << endl;
 
-        while(checkCreatureTriggers(room)){}
-        handleRoomTrig(room, in1);
+        checkCreatureTriggers(room);
 
         if(in1 == string("n") || in1 == string("s") || in1 == string("e") || in1 == string("w"))
         {
+            triggered = handleRoomTrig(room, in1);
             border_room = room->getBorderRoom(in1);//gets you the name of the room in that direction
-            if(border_room == string(""))//if you can't find the room
-            {
-                cout<<"Can't go that way."<<endl;
-            }
-            else
-            {//if you can, move to the next room
-                room = getRoom(border_room);
-                cout << room->getDescription() << endl;
+            //cout<<"================BORDER ROOM========="<<border_room<<endl;
+            if(!triggered){
+                if(border_room == string(""))//if you can't find the room
+                {
+                    cout<<"Can't go that way."<<endl;
+                }
+                else
+                {//if you can, move to the next room
+                    room = getRoom(border_room);
+                    cout << room->getDescription() << endl;
+                }
             }
         }
         else if(in1 == string("i"))
@@ -239,37 +241,28 @@ bool Map::checkCreatureTriggers(Room* _room) {
     Item* obj;//the current object
     bool fired = false;
     for(unsigned int i = 0; i<creatureVec.size(); i++) {//for each creature
-        //cout<<"Creature Iterator"<<endl;
         //if the cureature is in the current room
         if(_room->containsCreature(string(creatureVec.operator[](i)->getName()))) {
             currtrig = creatureVec.operator[](i)->getTrigger();
             if (currtrig != NULL)
             {//if they have a trigger
-                //cout<<"Trigger Found: "<< currtrig->print<<endl;
                 cond = currtrig->condition;
                 for (unsigned int j = 0;
                      j < itemVec.size(); j++)//check the items to see if it matches with the condition
                 {
-                    //cout<<"Look for Match "<<itemVec.size()<<endl;
                     obj = itemVec.operator[](j);
                     if (obj == NULL) { cout << "NULL POINTER" << endl; }
                     if (obj->getName() == string(cond->object))//if it does, check the status
                     {
-                        //cout<<"current object has same name as condition"<<endl;
                         if (obj->getStatus() == string(cond->status))//if the status is right
                         {
-                            //cout<<"Status is the same!"<<endl;
                             cout << currtrig->print << endl;
                             if ((currtrig->type) != string("permanent")) {
-                                //cout<<"Try and get rid of trigger"<<endl;
                                 obj->setTrigger(NULL);
-                                //cout<<"Removed Trigger"<<endl;
                             }
-                            //cout<<"Made it out"<<endl;
                             fired = true;
                         }
                     }
-                    //cout<<"Check Iterator"<<endl;
                 }
 
             }

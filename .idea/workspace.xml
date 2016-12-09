@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Map.cpp" line="82" />
+    <bookmark url="file://$PROJECT_DIR$/Map.cpp" line="84" />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
     <generated>
@@ -16,41 +16,11 @@
   <component name="ChangeListManager">
     <list default="true" id="107d3023-20d6-482f-9925-e4660db21024" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdC/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdC/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdCXX/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdCXX/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Base.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Base.cpp.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Container.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Container.cpp.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Creature.cpp.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Item.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Item.cpp.obj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Room.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/Room.cpp.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/main.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/main.cpp.obj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/objects.a" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/objects.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base.cpp" afterPath="$PROJECT_DIR$/Base.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base.h" afterPath="$PROJECT_DIR$/Base.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Container.cpp" afterPath="$PROJECT_DIR$/Container.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Container.h" afterPath="$PROJECT_DIR$/Container.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Map.cpp" afterPath="$PROJECT_DIR$/Map.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Map.h" afterPath="$PROJECT_DIR$/Map.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Room.cpp" afterPath="$PROJECT_DIR$/Room.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Room.h" afterPath="$PROJECT_DIR$/Room.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/30862_Text_Game.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/30862_Text_Game.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
     </list>
     <ignored path="30862_Text_Game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,22 +59,22 @@
           <file leaf-file-name="Map.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Map.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="332">
-                  <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+                <state relative-caret-position="60">
+                  <caret line="242" column="75" lean-forward="false" selection-start-line="242" selection-start-column="75" selection-end-line="242" selection-end-column="75" />
                   <folding>
                     <element signature="e#42#60#0" expanded="true" />
                     <element signature="e#107#323#0" expanded="false" />
-                    <element signature="e#6010#6271#0" expanded="false" />
-                    <element signature="e#6272#6479#0" expanded="false" />
-                    <element signature="e#6480#6705#0" expanded="false" />
-                    <element signature="e#6706#8745#0" expanded="false" />
-                    <element signature="e#8746#8984#0" expanded="false" />
-                    <element signature="e#8985#9696#0" expanded="false" />
-                    <element signature="e#9697#10116#0" expanded="false" />
-                    <element signature="e#10117#10927#0" expanded="false" />
-                    <element signature="e#10928#16273#0" expanded="false" />
-                    <element signature="e#16274#16498#0" expanded="false" />
-                    <element signature="e#16499#16723#0" expanded="false" />
+                    <element signature="e#3594#6131#0" expanded="false" />
+                    <element signature="e#6132#6393#0" expanded="false" />
+                    <element signature="e#6394#6601#0" expanded="false" />
+                    <element signature="e#6602#6827#0" expanded="false" />
+                    <element signature="e#8291#8529#0" expanded="false" />
+                    <element signature="e#8530#9241#0" expanded="false" />
+                    <element signature="e#9242#9661#0" expanded="false" />
+                    <element signature="e#9662#10472#0" expanded="false" />
+                    <element signature="e#10473#15818#0" expanded="false" />
+                    <element signature="e#15819#16043#0" expanded="false" />
+                    <element signature="e#16044#16268#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -113,25 +83,25 @@
           <file leaf-file-name="Room.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Room.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
                   <folding>
-                    <element signature="e#97#981#0" expanded="false" />
-                    <element signature="e#982#1165#0" expanded="false" />
-                    <element signature="e#1166#1208#0" expanded="false" />
-                    <element signature="e#1209#1265#0" expanded="false" />
-                    <element signature="e#1266#1326#0" expanded="false" />
-                    <element signature="e#1327#1376#0" expanded="false" />
-                    <element signature="e#1377#1434#0" expanded="false" />
-                    <element signature="e#1435#1487#0" expanded="false" />
-                    <element signature="e#1488#1627#0" expanded="false" />
-                    <element signature="e#1628#1709#0" expanded="false" />
-                    <element signature="e#1710#1771#0" expanded="false" />
-                    <element signature="e#1772#1849#0" expanded="false" />
-                    <element signature="e#1850#2101#0" expanded="false" />
-                    <element signature="e#2102#2308#0" expanded="false" />
-                    <element signature="e#2309#2554#0" expanded="false" />
-                    <element signature="e#2555#2834#0" expanded="false" />
+                    <element signature="e#97#1045#0" expanded="false" />
+                    <element signature="e#1046#1229#0" expanded="false" />
+                    <element signature="e#1230#1272#0" expanded="false" />
+                    <element signature="e#1273#1329#0" expanded="false" />
+                    <element signature="e#1330#1390#0" expanded="false" />
+                    <element signature="e#1391#1440#0" expanded="false" />
+                    <element signature="e#1441#1498#0" expanded="false" />
+                    <element signature="e#1499#1551#0" expanded="false" />
+                    <element signature="e#1552#1691#0" expanded="false" />
+                    <element signature="e#1692#1773#0" expanded="false" />
+                    <element signature="e#1774#1835#0" expanded="false" />
+                    <element signature="e#1836#1913#0" expanded="false" />
+                    <element signature="e#1914#2165#0" expanded="false" />
+                    <element signature="e#2166#2372#0" expanded="false" />
+                    <element signature="e#2373#2618#0" expanded="false" />
+                    <element signature="e#2619#2898#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -318,10 +288,10 @@
         <option value="$PROJECT_DIR$/Container.h" />
         <option value="$PROJECT_DIR$/Container.cpp" />
         <option value="$PROJECT_DIR$/Map.h" />
-        <option value="$PROJECT_DIR$/Room.cpp" />
         <option value="$PROJECT_DIR$/Room.h" />
         <option value="$PROJECT_DIR$/Base.h" />
         <option value="$PROJECT_DIR$/Base.cpp" />
+        <option value="$PROJECT_DIR$/Room.cpp" />
         <option value="$PROJECT_DIR$/Map.cpp" />
       </list>
     </option>
@@ -635,12 +605,12 @@
       <workItem from="1481217372030" duration="666000" />
       <workItem from="1481239029531" duration="327000" />
       <workItem from="1481239375901" duration="3731000" />
-      <workItem from="1481243671154" duration="3940000" />
+      <workItem from="1481243671154" duration="4471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84205000" />
+    <option name="totallyTimeSpent" value="84736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1932" height="1055" extended-state="0" />
@@ -1008,31 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Room.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-          <folding>
-            <element signature="e#97#981#0" expanded="false" />
-            <element signature="e#982#1165#0" expanded="false" />
-            <element signature="e#1166#1208#0" expanded="false" />
-            <element signature="e#1209#1265#0" expanded="false" />
-            <element signature="e#1266#1326#0" expanded="false" />
-            <element signature="e#1327#1376#0" expanded="false" />
-            <element signature="e#1377#1434#0" expanded="false" />
-            <element signature="e#1435#1487#0" expanded="false" />
-            <element signature="e#1488#1627#0" expanded="false" />
-            <element signature="e#1628#1709#0" expanded="false" />
-            <element signature="e#1710#1771#0" expanded="false" />
-            <element signature="e#1772#1849#0" expanded="false" />
-            <element signature="e#1850#2101#0" expanded="false" />
-            <element signature="e#2102#2308#0" expanded="false" />
-            <element signature="e#2309#2554#0" expanded="false" />
-            <element signature="e#2555#2834#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Room.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1081,24 +1026,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Room.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#97#1045#0" expanded="false" />
+            <element signature="e#1046#1229#0" expanded="false" />
+            <element signature="e#1230#1272#0" expanded="false" />
+            <element signature="e#1273#1329#0" expanded="false" />
+            <element signature="e#1330#1390#0" expanded="false" />
+            <element signature="e#1391#1440#0" expanded="false" />
+            <element signature="e#1441#1498#0" expanded="false" />
+            <element signature="e#1499#1551#0" expanded="false" />
+            <element signature="e#1552#1691#0" expanded="false" />
+            <element signature="e#1692#1773#0" expanded="false" />
+            <element signature="e#1774#1835#0" expanded="false" />
+            <element signature="e#1836#1913#0" expanded="false" />
+            <element signature="e#1914#2165#0" expanded="false" />
+            <element signature="e#2166#2372#0" expanded="false" />
+            <element signature="e#2373#2618#0" expanded="false" />
+            <element signature="e#2619#2898#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Map.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+        <state relative-caret-position="60">
+          <caret line="242" column="75" lean-forward="false" selection-start-line="242" selection-start-column="75" selection-end-line="242" selection-end-column="75" />
           <folding>
             <element signature="e#42#60#0" expanded="true" />
             <element signature="e#107#323#0" expanded="false" />
-            <element signature="e#6010#6271#0" expanded="false" />
-            <element signature="e#6272#6479#0" expanded="false" />
-            <element signature="e#6480#6705#0" expanded="false" />
-            <element signature="e#6706#8745#0" expanded="false" />
-            <element signature="e#8746#8984#0" expanded="false" />
-            <element signature="e#8985#9696#0" expanded="false" />
-            <element signature="e#9697#10116#0" expanded="false" />
-            <element signature="e#10117#10927#0" expanded="false" />
-            <element signature="e#10928#16273#0" expanded="false" />
-            <element signature="e#16274#16498#0" expanded="false" />
-            <element signature="e#16499#16723#0" expanded="false" />
+            <element signature="e#3594#6131#0" expanded="false" />
+            <element signature="e#6132#6393#0" expanded="false" />
+            <element signature="e#6394#6601#0" expanded="false" />
+            <element signature="e#6602#6827#0" expanded="false" />
+            <element signature="e#8291#8529#0" expanded="false" />
+            <element signature="e#8530#9241#0" expanded="false" />
+            <element signature="e#9242#9661#0" expanded="false" />
+            <element signature="e#9662#10472#0" expanded="false" />
+            <element signature="e#10473#15818#0" expanded="false" />
+            <element signature="e#15819#16043#0" expanded="false" />
+            <element signature="e#16044#16268#0" expanded="false" />
           </folding>
         </state>
       </provider>
