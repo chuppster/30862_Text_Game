@@ -647,36 +647,33 @@ void Map::node2obj() {
         containVec.push_back(container);
     }
 
-        Creature *creature;
+    Creature *creature;
 
-        for (i = 0; i < creatures.size(); i++)
-        {
-            creature = new Creature();
-            currnode = creatures.operator[](i)->first_node();
-            while (true) {
-                if (string(currnode->name()) == string("name")) {
-                    creature->setName(currnode->value());
-                } else if (string(currnode->name()) == string("status")) {
-                    creature->setStatus(currnode->value());
-                } else if (string(currnode->name()) == string("trigger")) {
-                    creature->setTrigger(currnode);
-                } else if (string(currnode->name()) == string("description")) {
-                    creature->setDescription(currnode->value());
-                } else if (string(currnode->name()) == string("vulnerability")) {
-                    creature->addVulner(currnode->value());
-                } else if (string(currnode->name()) == string("attack")) {
-                    creature->setAttack(currnode);
-                }
-
-
-                if (currnode->next_sibling() == NULL) { break; }
-                currnode = currnode->next_sibling();
+    for (i = 0; i < creatures.size(); i++)
+    {
+        creature = new Creature();
+        currnode = creatures.operator[](i)->first_node();
+        while (true) {
+            if (string(currnode->name()) == string("name")) {
+                creature->setName(currnode->value());
+            } else if (string(currnode->name()) == string("status")) {
+                creature->setStatus(currnode->value());
+            } else if (string(currnode->name()) == string("trigger")) {
+                creature->setTrigger(currnode);
+            } else if (string(currnode->name()) == string("description")) {
+                creature->setDescription(currnode->value());
+            } else if (string(currnode->name()) == string("vulnerability")) {
+                creature->addVulner(currnode->value());
+            } else if (string(currnode->name()) == string("attack")) {
+                creature->setAttack(currnode);
             }
-            creatureVec.push_back(creature);
 
+
+            if (currnode->next_sibling() == NULL) { break; }
+            currnode = currnode->next_sibling();
         }
-
-
+        creatureVec.push_back(creature);
+    }
 }
 Room* Map::getRoom(string name) {
     for(unsigned int i = 0; i < roomVec.size(); i++)

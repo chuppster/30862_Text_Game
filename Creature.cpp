@@ -25,8 +25,15 @@ void Creature::removeVulner(char* _vulner){
 Attack* Creature::getAttack(){
     return attack;
 }
-void Creature::setAttack(xml_node<>* _attack){
-    attack->setup(_attack);
+void Creature::setAttack(xml_node<>* node){
+    if(node == NULL)
+    {
+        attack = NULL;
+    }
+    else {
+        attack = new Attack;
+        attack->setup(node);
+    }
 }
 bool Creature::checkVulner(string weapon) {
     for(unsigned int i = 0; i < vulner.size(); i++)
