@@ -22,7 +22,8 @@ public:
     vector<string> action;
 
     void setup(xml_node<>* node);
-
+    Attack();
+    virtual ~Attack();
 };
 
 

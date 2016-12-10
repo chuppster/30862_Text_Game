@@ -4,7 +4,11 @@
 
 #include "Base.h"
 
-Base::Base(){alive = true;}
+Base::Base()
+{
+    alive = true;
+    trigger = NULL;
+}
 Base::~Base(){}
 
 void Base::revive()

@@ -101,9 +101,10 @@ void Room::removeItem(string _item){
 void Room::removeCreature(char* _creature){
     for (std::vector<char*>::iterator it = creature.begin() ; it != creature.end(); ++it)
     {
-        if (string(*it) == string(_creature))
-        {
-            creature.erase(it);
+        if(creature.size()!=0) {
+            if (string(*it) == string(_creature)) {
+                creature.erase(it);
+            }
         }
     }
 }

@@ -26,6 +26,8 @@ public:
     void setup(xml_node<>* node);
     void printTrigger();
     void use();
+    Condition* getCondition();
+
 };
 
 #endif //INC_30862_TEXT_GAME_TRIGGER_H

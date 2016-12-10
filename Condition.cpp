@@ -3,7 +3,12 @@
 //
 
 #include "Condition.h"
-Condition::Condition() {}
+Condition::Condition() {
+    has = (char*)("");
+    object = (char*)("");
+    owner = (char*)("");
+    status = (char*)("");
+}
 Condition::~Condition() {}
 
 void Condition::setup(xml_node<> *node) {

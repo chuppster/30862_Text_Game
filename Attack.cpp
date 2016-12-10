@@ -5,6 +5,12 @@
 #include <iostream>
 #include "Attack.h"
 
+Attack::Attack(){
+    print = string("");
+    condition = new Condition;
+};
+Attack::~Attack(){};
+
 void Attack::setup(xml_node<>* node) {
     xml_node<>* currnode = node->first_node();
     while(true)

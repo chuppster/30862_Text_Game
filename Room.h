@@ -45,6 +45,7 @@ public:
     bool containsCreature(string _creature);
     Room();
     virtual ~Room();
+
 };
 
 #endif //INC_30862_TEXT_GAME_ROOM_H

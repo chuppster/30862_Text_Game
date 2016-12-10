@@ -1,7 +1,12 @@
 #include "Trigger.h"
 
 Trigger::~Trigger(){};
-Trigger::Trigger() {used = false;}
+Trigger::Trigger() {
+    used = false;
+    type = (char*)("normal");
+    command = (char*)("");
+    print = (char*)("");
+    action = (char*)("");}
 void Trigger::use() {
     if(string(type) != string("permanent"))
     {
@@ -57,11 +62,13 @@ void Trigger::setup(xml_node<>* node) {
                 {break;}
                 subnode = subnode->next_sibling();
             }
-
         }
         if(currnode->next_sibling() == NULL)
         {break;}
         currnode = currnode->next_sibling();
     }
     //cout << currnode->name() << currnode->value() <<endl;
+}
+Condition* Trigger::getCondition() {
+    return condition;
 }

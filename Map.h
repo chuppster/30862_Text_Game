@@ -51,6 +51,8 @@ public:
     void add(Item* _obj, Container* _cont);
     void del(string _obj);
     void removeFromInv(string _item);
+    void checkContTriggers();
+    void add(string _obj, string _room_or_container);
 };
 
 

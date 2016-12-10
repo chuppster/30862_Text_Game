@@ -4,7 +4,9 @@
 
 #include "Creature.h"
 
-Creature::Creature() {}
+Creature::Creature() {
+    attack = new Attack;
+}
 Creature::~Creature() {}
 
 vector<char*> Creature::getVulner(){
