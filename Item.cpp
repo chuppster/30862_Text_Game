@@ -4,7 +4,8 @@
 
 #include "Item.h"
 
-Item::Item() {turn_on=new Turnon;}
+Item::Item() {turn_on=new Turnon;
+            writing = (char*)("");}
 Item::~Item(){}
 
 void Item::setWriting(char* _writing){

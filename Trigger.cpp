@@ -5,8 +5,7 @@ Trigger::Trigger() {
     used = false;
     type = (char*)("normal");
     command = (char*)("");
-    print = (char*)("");
-    action = (char*)("");}
+    print = (char*)(""); }
 void Trigger::use() {
     if(string(type) != string("permanent"))
     {
@@ -34,7 +33,7 @@ void Trigger::setup(xml_node<>* node) {
         }
         if(string(currnode->name()) == string("action"))
         {
-            action = currnode->value();
+            action.push_back(string(currnode->value()));
         }
         if(string(currnode->name()) == string("condition"))
         {

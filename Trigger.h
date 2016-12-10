@@ -6,6 +6,7 @@
 #define INC_30862_TEXT_GAME_TRIGGER_H
 #include <iostream>
 #include <string>
+#include <vector>
 #include "rapidxml.hpp"
 #include "Condition.h"
 
@@ -17,7 +18,7 @@ public:
     char* type;
     char* command;
     char* print;
-    char* action;
+    vector<string> action;
     bool used;
     Condition* condition;
 

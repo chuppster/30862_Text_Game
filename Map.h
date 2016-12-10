@@ -39,7 +39,6 @@ public:
     void readItem(string _name);
     void turnOnItem(string _name);
     void updateItem(string _item, string _status);
-    bool checkCreatureTriggers(Room* _room);
     void pullTrigger(Base* _item);
     bool inventoryContains(string _item);
     Container* getContainer(string _cont);
@@ -47,12 +46,13 @@ public:
     Item* getItemInv(string _item);
     Item* getItemCont(string _item, string _cont);
     Item* getItem(string _item);
-    bool handleRoomTrig(Room* room, string input);
+    void add(string _obj, string _room_or_container);
     void add(Item* _obj, Container* _cont);
     void del(string _obj);
     void removeFromInv(string _item);
     void checkContTriggers();
-    void add(string _obj, string _room_or_container);
+    bool handleRoomTrig(Room* room, string input);
+    bool checkCreatureTriggers(Room* _room, string _input, bool* end);
 };
 
 
