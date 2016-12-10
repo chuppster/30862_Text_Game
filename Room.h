@@ -45,6 +45,7 @@ public:
     bool containsCreature(string _creature);
     Room();
     virtual ~Room();
+    bool hasContainer(string _cont);
 
 };
 

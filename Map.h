@@ -37,7 +37,7 @@ public:
     virtual ~Map();
     vector<string> split(string &s, char delim);
     void readItem(string _name);
-    void turnOnItem(string _name);
+    void turnOnItem(string _name, Room* room);
     void updateItem(string _item, string _status);
     void pullTrigger(Base* _item);
     bool inventoryContains(string _item);

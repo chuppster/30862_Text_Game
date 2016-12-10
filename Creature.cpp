@@ -16,7 +16,7 @@ void Creature::addVulner(char* _vulner){
     vulner.push_back(_vulner);
 }
 void Creature::removeVulner(char* _vulner){
-    for (std::vector<char*>::iterator it = vulner.begin() ; it != vulner.end(); ++it)
+    for (std::vector<char*>::iterator it = vulner.begin() ; it != vulner.end() && vulner.size() != 0; ++it)
     {
         if (*it == _vulner)
         {

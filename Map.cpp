@@ -21,7 +21,6 @@ void Map::printRoomObj() {
     }
     cout << endl;
 }
-
 void Map::run() {
 
     bool exit = false;
@@ -110,16 +109,21 @@ void Map::run() {
                     }
                 }
             }
-            for(auto i = containVec.begin(); i != containVec.end(); ++i)
-            {
-                Item* contItem = getItemCont(curritem, (*i)->getName());
-                if(contItem != NULL)
-                {
-                    if((*i)->open) {
-                        inventory.push_back(contItem->getName());
-                        (*i)->removeItem((char *)(contItem->getName().c_str()));
-                        cout << "Item " << contItem->getName() << " added to inventory" << endl;
-                        containhas = true;
+            vector<char*> tempContVec = room->getContainer();
+            for(auto temp = tempContVec.begin(); temp != tempContVec.end(); ++temp) {//iterate through the containers
+                Container *TempCont = getContainer((*temp));//get the current container
+                vector<char*> container_items = TempCont->getItem();//get the items in that container
+                for (auto temp3 = container_items.begin(); temp3 != container_items.end(); ++temp3) {//iterate through items
+                    if(curritem == string(*temp3)) {//if the item is correct
+                        Item *contItem = getItem(string(*temp3));
+                        if (contItem != NULL) {
+                            if (TempCont->open) {
+                                inventory.push_back(contItem->getName());
+                                TempCont->removeItem((char *) (contItem->getName().c_str()));
+                                cout << "Item " << contItem->getName() << " added to inventory" << endl;
+                                containhas = true;
+                            }
+                        }
                     }
                 }
             }
@@ -150,13 +154,14 @@ void Map::run() {
             }
             bool fired = false;
             curritem=input_vec.operator[](2);
-            for(auto a = inventory.begin(); a != inventory.end(); ++a)
-            {
-                if(*a == curritem)
-                {
-                    fired = true;
-                    cout<<"You activate the "<<curritem<<"."<<endl;
-                    turnOnItem(curritem);
+            int invSize = inventory.size();
+            if(invSize != 0) {
+                for (auto a = inventory.begin(); (a != inventory.end()) && !fired; ++a) {
+                    if (*a == curritem) {
+                        fired = true;
+                        cout << "You activate the " << curritem << "." << endl;
+                        turnOnItem(curritem, room);
+                    }
                 }
             }
             if(!fired)
@@ -191,19 +196,110 @@ void Map::run() {
                             cout << currAttack->print << endl;
                             for (unsigned int u = 0; u < currAttack->action.size(); u++) {
                                 vector<string> action = split(currAttack->action.operator[](u), ' ');
-                                if (action.operator[](0) == string("Delete")) {
+                                if(action[0] == string("s") || action[0] == string("n") || action[0] == string("e") || action[0] == string("w"))
+                                {
+                                    border_room = room->getBorderRoom(action[0]);//gets you the name of the room in that direction
+                                    if(border_room == string(""))//if you can't find the room
+                                    {
+                                        cout<<"Can't go that way."<<endl;
+                                    }
+                                    else
+                                    {//if you can, move to the next room
+                                        room = getRoom(border_room);
+                                        cout << room->getDescription() << endl;
+                                    }
+                                }
+                                else if(action[0] == string("Game"))
+                                {
+                                    exit = true;
+                                    cout<<"Game Over"<<endl;
+                                }
+                                else if (action.operator[](0) == string("Delete")) {
                                     del(action.operator[](1));
                                 } else if (action.operator[](0) == string("Add")) {
                                     currRoom = getRoom(action.operator[](3));
-                                    if (currRoom != NULL) { currRoom->addItem((char *) action.operator[](1).c_str()); }
+                                    if (currRoom != NULL)
+                                    {
+                                        for(auto creatsearch = creatureVec.begin(); creatsearch != creatureVec.end(); ++creatsearch)
+                                        {
+                                            if((*creatsearch)->getName() == action[1])
+                                            {
+                                                currRoom->addCreature((char*)action[1].c_str());
+                                            }
+                                        }
+                                        for(auto itemsearch = itemVec.begin(); itemsearch != itemVec.end(); ++itemsearch)
+                                        {
+                                            if((*itemsearch)->getName() == action[1])
+                                            {
+                                                currRoom->addItem((char *) action.operator[](1).c_str());
+                                            }
+                                        }
+
+                                        currRoom->addItem((char *) action.operator[](1).c_str());
+                                    }
                                     currCont = getContainer(action.operator[](3));
-                                    if (currCont != NULL) { currCont->addItem((char *) action.operator[](1).c_str()); }
+                                    if (currCont != NULL) {
+                                        currCont->addItem((char *) action.operator[](1).c_str());
+                                    }
                                 }
                             }
                         } else {
                             cout << "Error" << endl;
                         }
-                    }else{cout << "You assault " << input_vec[1] << " with " << input_vec[3] << endl;}
+                    }
+                    else
+                    {
+                        cout << "You assault " << input_vec[1] << " with " << input_vec[3] << endl;
+                        if(currAttack->print != string("")){cout<<currAttack->print<<endl;}
+                        for (unsigned int u = 0; u < currAttack->action.size(); u++) {
+                            vector<string> action = split(currAttack->action.operator[](u), ' ');
+                            if(action[0] == string("s") || action[0] == string("n") || action[0] == string("e") || action[0] == string("w"))
+                            {
+                                border_room = room->getBorderRoom(action[0]);//gets you the name of the room in that direction
+                                if(border_room == string(""))//if you can't find the room
+                                {
+                                    cout<<"Can't go that way."<<endl;
+                                }
+                                else
+                                {//if you can, move to the next room
+                                    room = getRoom(border_room);
+                                    cout << room->getDescription() << endl;
+                                }
+                            }
+                            else if(action[0] == string("Game"))
+                            {
+                                cout<<"Game Over"<<endl;
+                                exit = true;
+                            }
+                            else if (action.operator[](0) == string("Delete")) {
+                                del(action.operator[](1));
+                            } else if (action.operator[](0) == string("Add")) {
+                                currRoom = getRoom(action.operator[](3));
+                                if (currRoom != NULL)
+                                {
+                                    for(auto creatsearch = creatureVec.begin(); creatsearch != creatureVec.end(); ++creatsearch)
+                                    {
+                                        if((*creatsearch)->getName() == action[1])
+                                        {
+                                            currRoom->addCreature((char*)action[1].c_str());
+                                        }
+                                    }
+                                    for(auto itemsearch = creatureVec.begin(); itemsearch != creatureVec.end(); ++itemsearch)
+                                    {
+                                        if((*itemsearch)->getName() == action[1])
+                                        {
+                                            currRoom->addItem((char *) action.operator[](1).c_str());
+                                        }
+                                    }
+
+                                    currRoom->addItem((char *) action.operator[](1).c_str());
+                                }
+                                currCont = getContainer(action.operator[](3));
+                                if (currCont != NULL) {
+                                    currCont->addItem((char *) action.operator[](1).c_str());
+                                }
+                            }
+                        }}
 
                 }
                 else{
@@ -219,9 +315,11 @@ void Map::run() {
                 {
                     exit = true;
                     cout<<"Game Over"<<endl;
+                } else{
+                    cout<<"Error"<<endl;
                 }
             }
-            else {
+            else if(room->hasContainer(input_vec[1])){
                 currCont = getContainer(input_vec[1]);
 
                 if (currCont == NULL) {
@@ -230,6 +328,8 @@ void Map::run() {
                     currCont->printContents();
                     currCont->open = true;
                 }
+            } else{
+                cout<<"Error"<<endl;
             }
         }
         else if(in1 == string("drop"))
@@ -417,6 +517,18 @@ void Map::del(string _obj) {
     for(auto cont = containVec.begin(); cont!=containVec.end();++cont) {
         if ((*cont)->contains(_obj)) {
             (*cont)->removeItem((char *) _obj.c_str());
+        }
+    }
+    for(auto room = roomVec.begin(); room != roomVec.end(); ++room)
+    {
+        Room* currRoom = *room;
+        vector<char*> creatures = currRoom->getCreature();
+        for(auto creat = creatures.begin(); creat != creatures.end(); ++creat)
+        {
+            if(string(*creat) == _obj)
+            {
+                currRoom->removeCreature((char*)_obj.c_str());
+            }
         }
     }
 }
@@ -803,7 +915,7 @@ void Map::updateItem(string _item, string _status) {
         }
     }
 }
-void Map::turnOnItem(string _name) {
+void Map::turnOnItem(string _name, Room* room) {
     string action;
     vector<string> actions;
     string item;
@@ -818,9 +930,21 @@ void Map::turnOnItem(string _name) {
                 cout<<curr->print<<endl;
                 action = curr->action;
                 actions = split(action, ' ');
-                item = actions.operator[](1);
-                status = actions.operator[](3);
-                updateItem(item, status);
+                if(actions[0] == string("drop"))
+                {
+                    auto findItem = find(inventory.begin(), inventory.end(), actions[1]);
+                    room->addItem((char*)(*findItem).c_str());
+                    if(findItem != inventory.end())
+                    {
+                        inventory.erase(findItem);
+                    }
+                }
+                else
+                {
+                    item = actions.operator[](1);
+                    status = actions.operator[](3);
+                    updateItem(item, status);
+                }
             }
             else
             {cout<<"You can't turn that on"<<endl;}

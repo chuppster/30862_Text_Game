@@ -83,7 +83,7 @@ void Room::addCreature(char* _creature){
     creature.push_back(_creature);
 }
 void Room::removeContainer(char* _container){
-    for (std::vector<char*>::iterator it = container.begin() ; it != container.end(); ++it)
+    for (std::vector<char*>::iterator it = container.begin() ; it != container.end() && container.size() != 0; ++it)
     {
         if (string(*it) == string(_container))
         {
@@ -99,7 +99,7 @@ void Room::removeItem(string _item){
     }
 }
 void Room::removeCreature(char* _creature){
-    for (std::vector<char*>::iterator it = creature.begin() ; it != creature.end(); ++it)
+    for (std::vector<char*>::iterator it = creature.begin() ; it != creature.end() && creature.size() != 0; ++it)
     {
         if(creature.size()!=0) {
             if (string(*it) == string(_creature)) {
@@ -116,6 +116,16 @@ bool Room::containsCreature(string _creature) {
     for(auto i = creature.begin(); i != creature.end(); ++i)
     {
         if(string(*i) == _creature)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+bool Room::hasContainer(string _cont) {
+    for(auto i = container.begin(); i != container.end(); ++i)
+    {
+        if(string(*i) == _cont)
         {
             return true;
         }

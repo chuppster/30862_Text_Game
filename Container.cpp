@@ -34,16 +34,17 @@ vector<char*> Container::getAccept(){
     return accept;
 }
 void Container::removeItem(char* _item){
-    for (std::vector<char*>::iterator it = item.begin() ; it != item.end(); ++it)
+    for (std::vector<char*>::iterator it = item.begin(); it != item.end()&& (item.size() != 0); ++it)
     {
-        if (string(*it) == string(_item))
-        {
-            *it=(char*)"";
+        if(item.size() != 0) {
+            if (string(*it) == string(_item)) {
+                item.erase(it);
+            }
         }
     }
 }
 void Container::removeAccept(char* _item) {
-    for (std::vector<char*>::iterator it = accept.begin(); it != accept.end(); ++it) {
+    for (std::vector<char*>::iterator it = accept.begin(); it != accept.end() && accept.size() != 0; ++it) {
         if (string(*it) == string(_item)) {
             accept.erase(it);
         }
