@@ -5,7 +5,9 @@
 #include "Item.h"
 
 Item::Item() {turn_on=new Turnon;
-            writing = (char*)("");}
+            writing = (char*)("");
+            turn_on->action=(char*)("");
+            turn_on->print = (char*)("");}
 Item::~Item(){}
 
 void Item::setWriting(char* _writing){
@@ -19,6 +21,10 @@ char* Item::getWriting(){
 }
 
 Turnon* Item::getTurnon() {
+    if(string(turn_on->action) == string(""))
+    {
+        return NULL;
+    }
     return turn_on;
 }
 

@@ -92,7 +92,7 @@ void Map::run() {
                 cout<<endl;
             }
         }
-        else if(in1 == string("take"))//take command
+        else if(in1 == string("take") && input_vec.size() == 2)//take command
         {
             bool roomhas = false;
             bool containhas = false;
@@ -132,7 +132,7 @@ void Map::run() {
                 cout<<"Error"<<endl;
             }
         }
-        else if(in1 == string("read"))//read command
+        else if(in1 == string("read") && input_vec.size() == 2)//read command
         {
             curritem=input_vec.operator[](1);
             if(inventoryContains(curritem)) {
@@ -307,7 +307,7 @@ void Map::run() {
                 }
             }
         }
-        else if (in1 == string("open"))
+        else if (in1 == string("open") && input_vec.size() == 2)
         {
             if(input_vec[1] == string("exit"))
             {
@@ -365,10 +365,13 @@ void Map::run() {
                 string dest = input_vec[3];
                 if(inventoryContains(curritem))
                 {
-                    currCont = getContainer(dest);
-                    currCont->addItem((char*)curritem.c_str());
-                    removeFromInv(curritem);
-                    cout<<"Item "<<curritem<<" added to "<<currCont->getName()<<endl;
+                    if(containerExists(dest)) {
+                        currCont = getContainer(dest);
+                        currCont->addItem((char *) curritem.c_str());
+                        removeFromInv(curritem);
+                        cout << "Item " << curritem << " added to " << currCont->getName() << endl;
+                    }
+                    else{cout<<"Error"<<endl;}
                 }
                 else
                 {
@@ -377,10 +380,10 @@ void Map::run() {
             }
         }
 
-        else if(in1 == string("exit"))
+        /*else if(in1 == string("exit"))
         {
             exit = true;
-        }
+        }*/
         else
         {
             if (in1 != string(""))
@@ -392,6 +395,18 @@ void Map::run() {
 
 
 }
+bool Map::containerExists(string _cont)
+{
+    for(auto i = containVec.begin(); i != containVec.end(); ++i)
+    {
+        if((*i)->getName() == _cont)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 void Map::checkContTriggers() {
     Trigger* currtrig;
     bool triggered = false;

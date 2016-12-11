@@ -53,6 +53,7 @@ public:
     void checkContTriggers();
     bool handleRoomTrig(Room* room, string input);
     bool checkCreatureTriggers(Room* _room, string _input, bool* end);
+    bool containerExists(string _cont);
 };
 
 
